@@ -40,17 +40,13 @@ You can return the answer in any order.
 */
 
 
-var twoSum = function(nums, target) {
-  let array=[];
- for(let i=0; i<nums.length;i++){
-   for (let z=0;z<nums.length;z++){
-     if(nums[i] + nums[z] === target && (nums[i] + nums[i] !== target)){
-      array.push(i, z)
-     }
-   }
-   return array;
- }
+const twoSum =(nums, target)=>{
+  let storage={};
 
-};
-
+  for(let [index,value] of nums.entries()){
+    if(storage[value] !== undefined){
+      storage[target-value] = index;
+    }
+  }
+}
 console.log(twoSum([3,2,4],6))
