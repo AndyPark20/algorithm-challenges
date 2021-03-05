@@ -54,27 +54,96 @@ You can return the answer in any order.
 // }
 // console.log(twoSum([3, 2, 4], 6))
 
-const find = (array) => {
-  let number = 0;
-  array.sort();
-  console.log(array)
-    if (array.length % 2 === 1) {
-      const oddIndex = Math.floor(array.length / 2);
-      return array[oddIndex];
-    } else {
-      const evenIndex = (array.length) / 2;
-      number = ((array[evenIndex] + array[evenIndex - 1]) / 2);
-      return number;
-    }
-}
+// const find = (array) => {
+//   let number = 0;
+//   array.sort();
+//   console.log(array)
+//     if (array.length % 2 === 1) {
+//       const oddIndex = Math.floor(array.length / 2);
+//       return array[oddIndex];
+//     } else {
+//       const evenIndex = (array.length) / 2;
+//       number = ((array[evenIndex] + array[evenIndex - 1]) / 2);
+//       return number;
+//     }
+// }
 
-console.log(find([1,15,6,98,1,100,1]))
+// console.log(find([1,15,6,98,1,100,1]))
 
 /*
-You are given two non-empty linked lists representing two non-negative integers.
-The digits are stored in reverse order, and each of their nodes contains a single digit.
-Add the two numbers and return the sum as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
+Given two strings s and t, write a function to determine if t is an anagram of s.
+
+example 1:
+Input: s= 'anagram', t="nagaram"
+output:true
+
+example 2:
+Input: s = "rat", t="car"
+output:false;
+
+
+
+Given input: Two strings s and t;
+Expected output: True or False
+
+Check if two strings have the same length.
+  If "No"
+    output false
+  If "Yes"
+    iterate string s and iterate string t
+    check if all the values at given index on string s and t matches each other
+      if "Yes"
+        output true
+      if "No"
+        output false
 
 */
+
+// const isAnagram = (stringA, stringB) => {
+//   let arr1 = [];
+//   let arr2 = [];
+//   if (stringA.length !== stringB.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < stringA.length; i++) {
+//     arr1.push(stringA[i]);
+//   }
+//   for (let z = 0; z < stringB.length; z++) {
+//     arr2.push(stringB[z]);
+//   }
+//   arr1.sort();
+//   arr2.sort();
+//   for (let j = 0; j < arr1.length; j++) {
+//     if (!arr2.includes(arr1[j])) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+var isAnagram= function(s,t){
+  const dict={};
+  let num =0;
+  if(s.length !== t.length){
+    return false;
+  }
+
+  for(let i=0;i<s.length;i++){
+    if(dict[s[i]]===undefined){
+      dict[s[i]] = 1;
+    }else{
+      num++;
+    }
+  }
+console.log(dict)
+  for(let j=0;j<t.length;t++){
+    if(dict[t[j]]!==[t[j]]){
+      return true;
+    }
+    return false;
+  }
+
+}
+
+console.log(isAnagram('anagram', 'nagaram'))
