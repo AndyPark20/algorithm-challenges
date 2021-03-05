@@ -40,13 +40,41 @@ You can return the answer in any order.
 */
 
 
-const twoSum =(nums, target)=>{
-  let storage={};
+// const twoSum = (nums, target) => {
+//   let storage = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     let pointNums = nums[i];
+//     let pairedNumber = target - pointNums;
+//     if (storage[pairedNumber] === undefined) {
+//       storage[pairedNumber] = i;
+//     } else {
+//       return [storage[pairedNumber], i]
+//     }
+//   }
+// }
+// console.log(twoSum([3, 2, 4], 6))
 
-  for(let [index,value] of nums.entries()){
-    if(storage[value] !== undefined){
-      storage[target-value] = index;
+const find = (array) => {
+  let number = 0;
+  array.sort((a, b) => a - b);
+  for (let i = 0; i < array.length; i++) {
+    if (array.length % 2 === 1) {
+      const oddIndex = Math.floor(array.length / 2);
+      return array[oddIndex];
+    } else {
+      const evenIndex = (array.length) / 2;
+      number = ((array[evenIndex] + array[evenIndex - 1]) / 2);
+      return number;
     }
   }
 }
-console.log(twoSum([3,2,4],6))
+
+
+/*
+You are given two non-empty linked lists representing two non-negative integers.
+The digits are stored in reverse order, and each of their nodes contains a single digit.
+Add the two numbers and return the sum as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+
+*/
