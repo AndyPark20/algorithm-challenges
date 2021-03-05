@@ -124,31 +124,75 @@ Check if two strings have the same length.
 
 
 
-//Anagram challenge
-var isAnagram= function(s,t){
-  const dict={};
-  if(s.length !== t.length){
-    return false;
+/*****Anagram challenge*****/
+
+// var isAnagram= function(s,t){
+//   const dict={};
+//   if(s.length !== t.length){
+//     return false;
+//   }
+
+//   for(let i=0;i<s.length;i++){
+//    let char = s[i];
+//    if(char in dict){
+//      dict[char]++;
+//    }else{
+//      dict[char]=1;
+//    }
+// }
+//   for (let j=0;j<t.length;j++){
+//     let char =t[j];
+//     if(char in dict){
+//       dict[char]--;
+//     }else{
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// console.log(isAnagram('anagram', 'nagaram'))
+
+
+/*Given an array nums.We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+Return the running sum of nums.*/
+
+// const runningSum =(list)=>{
+//   //Create a variable and assign an empty array
+//   //Create a variable and assign initial value of 0
+//   //iterate thru the array
+//   //if the index is 0 push the value into the newly created array
+//   //else add the current value with the previous value in the newely created array
+//   // push the sum into the newly created array
+//   const array=[];
+//   let sum =0;
+//   for(let i =0 ; i<list.length;i++){
+//     if(i===0){
+//       array.push(list[i])
+//     }else{
+//       sum=array[i-1] + list[i]
+//       array.push(sum)
+//     }
+//   }
+//   return array;
+// }
+
+
+const runningSum =(list)=>{
+  //create an empty array
+  //Create a variable and assign a value of 0
+  // iterate over the list array
+  // add the current value to the newly created variable that has the initial value of 0
+  // then push this to the empty array
+
+  const array=[];
+  let sum=0;
+  for(let i=0;i<list.length;i++){
+    sum+=list[i];
+    array.push(sum)
   }
 
-  for(let i=0;i<s.length;i++){
-   let char = s[i];
-   if(char in dict){
-     dict[char]++;
-   }else{
-     dict[char]=1;
-   }
-}
-  for (let j=0;j<t.length;j++){
-    let char =t[j];
-    if(char in dict){
-      dict[char]--;
-    }else{
-      return false;
-    }
-  }
-
-  return true;
 }
 
-console.log(isAnagram('anagram', 'nagaram'))
+console.log(runningSum([1, 1, 1, 1, 1]))
