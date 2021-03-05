@@ -124,26 +124,32 @@ Check if two strings have the same length.
 
 var isAnagram= function(s,t){
   const dict={};
-  let num =0;
   if(s.length !== t.length){
     return false;
   }
 
   for(let i=0;i<s.length;i++){
-    if(dict[s[i]]===undefined){
-      dict[s[i]] = 1;
+   let char = s[i];
+   if(char in dict){
+     dict[char]++;
+   }else{
+     dict[char]=1;
+   }
+}
+  for (let j=0;j<t.length;j++){
+    let char =t[j];
+    if(char in dict){
+      dict[char]--;
     }else{
-      num++;
+      return false;
     }
   }
-console.log(dict)
-  for(let j=0;j<t.length;t++){
-    if(dict[t[j]]!==[t[j]]){
-      return true;
+  for(let key in dict){
+    if(dict[key]){
+      return false;
     }
-    return false;
   }
-
+  return true;
 }
 
 console.log(isAnagram('anagram', 'nagaram'))
