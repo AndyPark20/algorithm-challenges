@@ -122,6 +122,9 @@ Check if two strings have the same length.
 //   return true;
 // }
 
+
+
+//Anagram challenge
 var isAnagram= function(s,t){
   const dict={};
   if(s.length !== t.length){
