@@ -147,11 +147,7 @@ var isAnagram= function(s,t){
       return false;
     }
   }
-  for(let key in dict){
-    if(dict[key]){
-      return false;
-    }
-  }
+
   return true;
 }
 
