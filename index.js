@@ -56,8 +56,8 @@ You can return the answer in any order.
 
 const find = (array) => {
   let number = 0;
-  array.sort((a, b) => a - b);
-  for (let i = 0; i < array.length; i++) {
+  array.sort();
+  console.log(array)
     if (array.length % 2 === 1) {
       const oddIndex = Math.floor(array.length / 2);
       return array[oddIndex];
@@ -66,9 +66,9 @@ const find = (array) => {
       number = ((array[evenIndex] + array[evenIndex - 1]) / 2);
       return number;
     }
-  }
 }
 
+console.log(find([1,15,6,98,1,100,1]))
 
 /*
 You are given two non-empty linked lists representing two non-negative integers.
