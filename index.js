@@ -179,20 +179,46 @@ Return the running sum of nums.*/
 // }
 
 
-const runningSum =(list)=>{
-  //create an empty array
-  //Create a variable and assign a value of 0
-  // iterate over the list array
-  // add the current value to the newly created variable that has the initial value of 0
-  // then push this to the empty array
+// const runningSum =(list)=>{
+//   //create an empty array
+//   //Create a variable and assign a value of 0
+//   // iterate over the list array
+//   // add the current value to the newly created variable that has the initial value of 0
+//   // then push this to the empty array
 
-  const array=[];
-  let sum=0;
-  for(let i=0;i<list.length;i++){
-    sum+=list[i];
-    array.push(sum)
-  }
+//   const array=[];
+//   let sum=0;
+//   for(let i=0;i<list.length;i++){
+//     sum+=list[i];
+//     array.push(sum)
+//   }
 
-}
+// }
 
-console.log(runningSum([1, 1, 1, 1, 1]))
+// console.log(runningSum([1, 1, 1, 1, 1]))
+
+/*
+Given an array of integers arr and an integer k. Find the least number of unique integers after removing exactly k elements.
+
+Example 1:
+
+Input: arr = [5,5,4], k = 1
+Output: 1
+Explanation: Remove the single 4, only 5 is left.
+Example 2:
+Input: arr = [4,3,1,1,3,3,2], k = 3
+Output: 2
+Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will be left.
+*/
+
+
+var findLeastNumOfUniqueInts = function (arr, k) {
+    //create a variable and assign an empty object
+    //iterate thru the array
+        // if the value is not in the object insert it
+        // if the value is in the object then, increment it
+    //iterate thru the object
+        // if the property value is less than k OR equal to, then decrement it.
+        // return the length of the object.
+      const hist ={}
+};
