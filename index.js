@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*Coding Challenge
 Easy
 Codewriting
@@ -14,7 +14,6 @@ Codewriting
 
 1000
 
->>>>>>> 58bc4c7f7ea34d723077e422317b009436972eae
 Given an array a that contains only numbers in the range from 1 to a.length, find the first duplicate number for which the second occurrence has the minimal index.
 In other words, if there are more than 1 duplicated numbers,
 return the number for which the second occurrence has a smaller index than the second occurrence of the other number does. If there are no such elements, return -1.
@@ -40,13 +39,13 @@ return the number for which the second occurrence has a smaller index than the s
 /*
 Share
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-<<<<<<< HEAD
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-=======
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
->>>>>>> 58bc4c7f7ea34d723077e422317b009436972eae
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+
 You can return the answer in any order.
 */
 
@@ -82,7 +81,7 @@ You can return the answer in any order.
 // console.log(find([1,15,6,98,1,100,1]))
 
 /*
-<<<<<<< HEAD
+
 Given two strings s and t, write a function to determine if t is an anagram of s.
 example 1:
 Input: s= 'anagram', t="nagaram"
@@ -92,7 +91,7 @@ Input: s = "rat", t="car"
 output:false;
 Given input: Two strings s and t;
 Expected output: True or False
-=======
+
 
 Given two strings s and t, write a function to determine if t is an anagram of s.
 
@@ -120,10 +119,8 @@ Check if two strings have the same length.
         output true
       if "No"
         output false
-<<<<<<< HEAD
-=======
 
->>>>>>> 58bc4c7f7ea34d723077e422317b009436972eae
+s
 */
 
 // const isAnagram = (stringA, stringB) => {
@@ -225,13 +222,12 @@ Return the running sum of nums.*/
 
 /*
 Given an array of integers arr and an integer k. Find the least number of unique integers after removing exactly k elements.
-<<<<<<< HEAD
 Example 1:
 =======
 
 Example 1:
 
->>>>>>> 58bc4c7f7ea34d723077e422317b009436972eae
+
 Input: arr = [5,5,4], k = 1
 Output: 1
 Explanation: Remove the single 4, only 5 is left.
@@ -242,74 +238,56 @@ Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will 
 */
 
 
-var findLeastNumOfUniqueInts = function (arr, k) {
-<<<<<<< HEAD
-  //create a variable and assign an empty object
-  //iterate thru the array
-  // if the value is not in the object insert it
-  // if the value is in the object then, increment it
-  //iterate thru the object
-  // if the property value is less than k OR equal to, then decrement it.
-  // return the length of the object.
-  const hist = {};
-  const leftOver = {};
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] in hist) {
-      hist[arr[i]]++;
-    } else {
-      hist[arr[i]] = 1;
-    }
-  }
-  for (const key in hist) {
-    if (hist[key] < k && hist[key]==1) {
-      hist[key]=0;
-      if (hist[key] !== 0) {
-        leftOver[key] = hist[key];
-      }
-    }else{
-      hist[key]--;
-      if(hist[key]!==0){
-        leftOver[key] = hist[key];
-      }
-    }
-  }
-  console.log(hist)
-  return Object.keys(leftOver).length;
+// var findLeastNumOfUniqueInts = function (arr, k) {
+
+//create a variable and assign an empty object
+//iterate thru the array
+// if the value is not in the object insert it
+// if the value is in the object then, increment it
+//iterate thru the object
+// if the property value is less than k OR equal to, then decrement it.
+// return the length of the object.
+// const hist = {};
+// const leftOver = {};
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] in hist) {
+//     hist[arr[i]]++;
+//   } else {
+//     hist[arr[i]] = 0;
+//   }
+// }
+// for (const key in hist) {
+//   if (hist[key]<=k) {
+//     hist[key]=0;
+//   }else{
+//     hist[key]--;
+//     if(hist[key]!==0){
+//       leftOver[key] = hist[key];
+//     }
+//   }
+// }
+//   console.log(hist)
+//   return Object.keys(leftOver).length;
+// };
+
+// // console.log(findLeastNumOfUniqueInts([5, 5, 4], 1))
+// // console.log(findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2], 3))
+// console.log(findLeastNumOfUniqueInts([2, 1, 1, 3, 3, 3], 3))
+
+
+/*
+Write a function that reverses a string.
+The input string is given as an array of characters char[].*/
+
+
+var reverseString = function (s) {
+  //create a variable and assign an empty array to it
+  // iterate thru array s from the opposite length
+  // push the value @ index to the empty array.
+  //return the pushed array.
+
+  s.reverse();
+
 };
 
-// console.log(findLeastNumOfUniqueInts([5, 5, 4], 1))
-// console.log(findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2], 3))
-console.log(findLeastNumOfUniqueInts([2, 1, 1, 3, 3, 3], 3))
-=======
-    //create a variable and assign an empty object
-    //iterate thru the array
-        // if the value is not in the object insert it
-        // if the value is in the object then, increment it
-    //iterate thru the object
-        // if the property value is less than k OR equal to, then decrement it.
-        // return the length of the object.
-      const hist ={};
-      const leftOver ={};
-      for(let i=0;i<arr.length;i++){
-        if(arr[i] in hist){
-          hist[arr[i]]++;
-        }else{
-          hist[arr[i]]=1;
-        }
-      }
-      for(const key in hist){
-        if(hist[key]<=k || hist[key]>=k){
-          hist[key]--;
-          if(hist[key] !==0){
-            leftOver[key] = hist[key];
-          }
-        }
-      }
-
-      return Object.keys(leftOver).length;
-};
-
-console.log(findLeastNumOfUniqueInts([5, 5, 4],1))
-console.log(findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2],3))
-console.log(findLeastNumOfUniqueInts([2, 1, 1, 3, 3, 3],3))
->>>>>>> 58bc4c7f7ea34d723077e422317b009436972eae
+console.log(reverseString(["h", "e", "l", "l", "o"]))
