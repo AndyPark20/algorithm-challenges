@@ -220,5 +220,27 @@ var findLeastNumOfUniqueInts = function (arr, k) {
     //iterate thru the object
         // if the property value is less than k OR equal to, then decrement it.
         // return the length of the object.
-      const hist ={}
+      const hist ={};
+      const leftOver ={};
+      for(let i=0;i<arr.length;i++){
+        if(arr[i] in hist){
+          hist[arr[i]]++;
+        }else{
+          hist[arr[i]]=1;
+        }
+      }
+      for(const key in hist){
+        if(hist[key]<=k || hist[key]>=k){
+          hist[key]--;
+          if(hist[key] !==0){
+            leftOver[key] = hist[key];
+          }
+        }
+      }
+
+      return Object.keys(leftOver).length;
 };
+
+console.log(findLeastNumOfUniqueInts([5, 5, 4],1))
+console.log(findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2],3))
+console.log(findLeastNumOfUniqueInts([2, 1, 1, 3, 3, 3],3))
