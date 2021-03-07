@@ -237,10 +237,10 @@ var findLeastNumOfUniqueInts = function (arr, k) {
           }
         }
       }
-
+      console.log(hist)
       return Object.keys(leftOver).length;
 };
 
-console.log(findLeastNumOfUniqueInts([5, 5, 4],1))
-console.log(findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2],3))
+// console.log(findLeastNumOfUniqueInts([5, 5, 4],1))
+// console.log(findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2],3))
 console.log(findLeastNumOfUniqueInts([2, 1, 1, 3, 3, 3],3))
