@@ -19,3 +19,7 @@ function baz(){
 
 
 baz();
+
+/* JavaScript is an asynchrnous, non-blocking that
+looks like a multi-thread but in reality it is a single threaded operation.
+It will use event loop and event qeue for the operation.

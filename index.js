@@ -324,4 +324,7 @@ var reverseString = function (s) {
 };
 
 console.log(reverseString(["h", "e", "l", "l", "o"]))
+
+
+
 >>>>>>> ad1c402f060f923dfd8a39259431ebe8250bbe36
