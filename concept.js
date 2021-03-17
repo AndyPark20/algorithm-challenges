@@ -1,12 +1,24 @@
 
-/*Lexical Scoping
-This is when you can access variables defined outside of the function from the inside of that function.
-However, you cannot access the variables defined in the inner function from outter function.
 
-Also Hoisting comes in to play
-This is a JavaScript default behavior where it will assign the variables and functions into the top scope.*/
+//1. What is a closure?
+/* combination of functions bundled together with references to its surrounding state (lexical envrionment)
+In simple words, it means that the inner function can have an accecss to the outter function (scope).
+closure is made as soon as the function has been created.
+/*
 
-// Lexical scoping example:
+// 2. What is hoisting?
+/* hoisting is when Javascript brings the declared variable and functions to the very top and make it global
+so that it can be accecssed anywhere in the scope.
+for example, if you have:
+
+console.log(name)
+var name ='andy'
+
+You will see an ouput of Andy even though console.log comes before var name.
+*/
+
+
+// 4. Lexical scoping example:
 
 function baz(){
   let name ="Andy";
@@ -21,6 +33,7 @@ function baz(){
 baz();
 
 //Asynchronous
+
 /* JavaScript is an asynchrnous, non-blocking that
 looks like a multi-thread but in reality it is a single threaded operation.
 It will use event loop and event qeue for the operation.
