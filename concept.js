@@ -39,3 +39,36 @@ baz();
 /* JavaScript is an asynchrnous, non-blocking that
 looks like a multi-thread but in reality it is a single threaded operation.
 It will use event loop and event qeue for the operation.
+
+//6. What are the different data typpes present in Js?
+
+/*
+A. Primitive Types:
+  1. String
+  2. Boolean
+  3. Number
+  4. Undefined
+  5. Null
+  6. Symbol
+
+B. Non-primitive Types:
+
+  1. Objects
+
+
+
+// 7. == and ===
+
+/* == only checks for values and not data type
+=== checks for both values and data type.
+
+cohersion takes in place where one data type gets converted to another.
+for instance + will cause number to be converted into strings
+where as  - will cause strings to get converted into number
+
+
+
+//8 is Javascript dynamically or staticcally typed language?
+
+/* Javascript is dynamically typed languaged meaning that the variable is checked during run-time.
+Where as statically typed language is checked during compile-time. */
