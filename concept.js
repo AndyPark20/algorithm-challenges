@@ -4,7 +4,7 @@
 /* combination of functions bundled together with references to its surrounding state (lexical envrionment)
 In simple words, it means that the inner function can have an accecss to the outter function (scope).
 closure is made as soon as the function has been created.
-/*
+*/
 
 // 2. What is hoisting?
 /* hoisting is when Javascript brings the declared variable and functions to the very top and make it global
@@ -17,6 +17,10 @@ var name ='andy'
 You will see an ouput of Andy even though console.log comes before var name.
 */
 
+// 3. What is Lexical Scope?
+/*Lex-> parsing stage. Lexical --> compiled scope.
+The decision when it should be compiled has been defined as soon as you wrote the function.
+
 
 // 4. Lexical scoping example:
 
@@ -28,11 +32,9 @@ function baz(){
   foo();
 }
 
-
-
 baz();
 
-//Asynchronous
+//5.Asynchronous
 
 /* JavaScript is an asynchrnous, non-blocking that
 looks like a multi-thread but in reality it is a single threaded operation.
