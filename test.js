@@ -6,9 +6,12 @@ let url ="https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=
 //Create a variable and assign the index number for width and height.
 // h=107
 // w=100
-//Write a conditional if the w===100  or Stop here.
+// smallestIndex=smallValue(h,w)
+// Use slice method starting from index value 0  to smallestIndex.
+
 
 function smallValue(num1, num2){
+
   if(num1 > num2){
     return num2;
   }else{
