@@ -8,14 +8,7 @@ function anagrammyCollector(arr) {
   for (let i =0; i<arr.length; i++){
     sortArray.push(arr[i].split('').sort().join(''))
   }
-  for (let x=0; x<sortArray.length;x++){
-    sameWord+=sortArray[x]
-    if(sameWord === sortArray[x]){
-      sameArray.push([sortArray[x]])
-    }else{
-      sameArray.push([sortArray[x]])
-    }
-  }
+
   console.log(sortArray)
   console.log(sameArray)
 }
