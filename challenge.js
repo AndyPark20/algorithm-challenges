@@ -3,18 +3,19 @@
 
 function anagrammyCollector(arr) {
   let someArray={};
+  let checkWord=''
   for (let i=0;i<arr.length;i++){
-    someArray[arr[i]] = arr[i].split('').sort().join('')
+    someArray[arr[i].split('').sort().join('')] = arr[i];
+    console.log(someArray)
   }
-  for (const keys in someArray){
-    console.log(someArray[keys])
-    // if(someArray[])
-  }
-  console.log(someArray)
+
+
+    return Object.keys(someArray).length;
+
 }
 
-let array = ["eat", "tea", "tan", "ate", "nat", "bat"];
-anagrammyCollector(array)
+let array = ["cat", "atc", "silent", "many"];
+console.log(anagrammyCollector(array));
 
 // Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
 
