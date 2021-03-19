@@ -15,7 +15,10 @@ function baz(){
   }
   foo();
 }
-
-
-
 baz();
+
+
+//hoisting example:
+
+console.log(color);
+var color='red';
