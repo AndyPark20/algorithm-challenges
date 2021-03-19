@@ -6,6 +6,10 @@ function anagrammyCollector(arr) {
   for (let i=0;i<arr.length;i++){
     someArray[arr[i]] = arr[i].split('').sort().join('')
   }
+  for (const keys in someArray){
+    console.log(someArray[keys])
+    // if(someArray[])
+  }
   console.log(someArray)
 }
 
