@@ -6,15 +6,14 @@ function anagrammyCollector(arr) {
   let checkWord=''
   for (let i=0;i<arr.length;i++){
     someArray[arr[i].split('').sort().join('')] = arr[i];
-    console.log(someArray)
   }
 
-
+  console.log(someArray)
     return Object.keys(someArray).length;
 
 }
 
-let array = ["cat", "atc", "silent", "many"];
+let array = ["cat", "atc", "silent", "many","miss","tac"];
 console.log(anagrammyCollector(array));
 
 // Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
