@@ -71,4 +71,6 @@ where as  - will cause strings to get converted into number
 //8 is Javascript dynamically or staticcally typed language?
 
 /* Javascript is dynamically typed languaged meaning that the variable is checked during run-time.
-Where as statically typed language is checked during compile-time. */
+Where as statically typed language is checked during compile-time.
+
+example is var a =24 --> var a can be converted into var a = "String"*/
