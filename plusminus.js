@@ -12,31 +12,29 @@ function plusMinus(arr){
   // add condition if the next value is in the array, incremenet 1 else just leave it.
   // Loop thru the object and retrieve the value and divide that by the length of the original arr.
   // use .toFixed() to 6 decimal places
-  // push the integer into the variable that has empty array assigned.
+  // concat the strings.
   // console log to see if the answer is correct,
   // if so return the integer
 
 
 
-  let compareObj={'neg':0,'pos':0,'0':0};
-  let finalArray=[];
+  let neg=0;
+  let pos=0;
+  let zero=0;
   let number =0;
+  let finalString='';
+
   for (let i=0; i<arr.length; i++){
-    if(Math.sign(arr[i])=== -1){
-      compareObj['neg']++;
-    }else if(Math.sign(arr[i])=== 1){
-      compareObj['pos']++;
-    }else if(Math.sign(arr[i])=== 0){
-      compareObj['0']++;
+    if(arr[i]< 0){
+      neg+=1
+    }else if(arr[i]>0){
+      pos+=1
+    }else if(arr[i] === 0){
+      zero+=1
     }
   }
-  for (const keys in compareObj){
-    let divisionResult= compareObj[keys] / arr.length;
-    let finalNumber = divisionResult.toFixed(6)
-    finalArray.push(finalNumber);
-  }
-  return finalArray;
-
+  finalString+=(pos/arr.length).toFixed(6) + '\n' + (neg/arr.length).toFixed(6)+ '\n' + (zero/arr.length).toFixed(6);
+  return finalString;
 }
 
-console.log(plusMinus([0, 0, -1, 1, 1,]))
+console.log(plusMinus([-4, 3, - 9, 0, 4, 1]))
