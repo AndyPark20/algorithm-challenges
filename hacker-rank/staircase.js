@@ -16,8 +16,6 @@ function stairCase(n){
   }
   console.log(finalResult);
 
-
-
 }
 
 
