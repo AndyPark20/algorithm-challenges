@@ -17,7 +17,7 @@ function birthday(candles){
       array.push(candles[i]);
     }
   }
-  console.log(array.length);
+  return array.length
 }
 
 console.log(birthday([4,4,1,3]))
