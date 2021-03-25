@@ -14,9 +14,37 @@ function militaryTime(s){
   // use splice method to add and replace the current hour listed on the string.
 
   //taking the hour string and coverting it to military time
+  const splitTime =s.split('');
+  const hourPortion =s.slice(0,2)
+  const timeIndicatorDay = splitTime.indexOf('P');
+  const twelvePm=splitTime.slice(0,2);
+  let militaryTime =''
+  let finalResult=''
+
+  for (let i=0; i<splitTime.length;i++){
+    if (splitTime[i] === 'A' && hourPortion !=='12' || (splitTime[i] === 'P' && hourPortion ==='12')){
+      splitTime.splice(i,2);
+      finalResult= splitTime.join('');
+    }else if (splitTime[i]==='P' && hourPortion !=='12'){
+      splitTime.splice(i,2);
+      splitTime.splice(0,2);
+      militaryTime = (parseInt(hourPortion) + 12).toString();
+     splitTime.unshift(militaryTime);
+     finalResult = splitTime.join('')
+    }else if (splitTime[i]==='A' && hourPortion ==='12'){
+      splitTime.splice(i,2);
+      splitTime.splice(0,2);
+      militaryTime = '00'
+      splitTime.unshift(militaryTime);
+      finalResult = splitTime.join('')
+    }
+  }
+
+  return finalResult;
 
 }
 
+console.log(militaryTime('12:05:00AM'))
 
 
 
@@ -50,5 +78,3 @@ function militaryTime(s){
 // const finalResult = mainElement.join('')
 // console.log(finalResult)
 // }
-
-// console.log(militaryTime('08:05:45PM'))
