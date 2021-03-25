@@ -2,23 +2,29 @@
 // provided an array of lowercase strings, return the array of similiar anagrams together
 
 function anagrammyCollector(arr) {
-  let someArray={};
-  let checkWord='';
-  let masterArray=[];
-  for (let i=0;i<arr.length;i++){
+  let someArray = {};
+  let masterArray = [];
+  for (let i = 0; i < arr.length; i++) {
     const propValue = arr[i].split('').sort().join('');
-    someArray[arr[i]] = propValue;
+    someArray[arr[i]] =propValue;
+  }
+
+  for (const keys in someArray){
+    if(someArray.hasOwnProperty(someArray[keys])){
+      console.log(someArray[keys])
+    }else{
+      console.log('else', someArray[keys])
     }
-
-  for (const keys in someArray){}
-
-  console.log(someArray)
-
+  }
+// console.log(masterArray)
 
 }
 
-let array = ["eat", "tea", "tan", "ate", "nat", "bat"];
-console.log(anagrammyCollector(array));
+
+
+
+  let array = ["eat", "tea", "tan", "ate", "nat", "bat"];
+  console.log(anagrammyCollector(array));
 
 // Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
 
