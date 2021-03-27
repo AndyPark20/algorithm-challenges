@@ -9,7 +9,11 @@
 
 
 function fruit (value1,value2,value3,value4,value5){
-
+    //Loop thru the distance in the apples array and add it to the origin position on the apple tree
+    //Loop thru the distance in the oranges array and add it to the origin position on the orange tree
+    //create a variable for the new distances for apples and oranges array and assign an empty array.
+    //push the new distance number in the array for apples and oranges
+    //
 }
 
 const house =[7,11];
