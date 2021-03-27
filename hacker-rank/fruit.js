@@ -7,8 +7,8 @@
 // fifth array (n) --> the distance at which oranges have fallen
 
 
-
-function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFallPosition){
+// s, t, a, b, apples, oranges
+function fruit (s,t,a,b,apples,oranges){
     //create a variable for the new distances for apples and oranges array and assign an empty array.
     //create a variable for the finalResult and assign an empty object
     //create a variable for the finalArray and assign an empty Array
@@ -28,21 +28,21 @@ function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFall
     const finalArray=[];
 
     for (let i=0;i<appleFallPosition.length;i++){
-      appleDistance.push(appleFallPosition[i]+ fruitFallenPosition[0]);
+      appleDistance.push(appleFallPosition[i]+ t[0]);
     }
 
     for (let x=0;x<orangeFallPosition.length;x++){
-      orangeDistance.push(orangeFallPosition[x]+fruitFallenPosition[1]);
+      orangeDistance.push(orangeFallPosition[x]+t[1]);
     }
 
     for (let i=0;i<appleDistance.length; i++){
-      if(appleDistance[i]>=7 && appleDistance[i]<=11){
+      if(appleDistance[i]>=s && appleDistance[i]<=t){
         treeObject['apple']++;
       }
     }
 
     for (let i=0;i<orangeDistance.length;i++){
-      if(orangeDistance[i]>=7 && orangeDistance[i]<=11){
+      if(orangeDistance[i]>=s && orangeDistance[i]<=t){
         treeObject['orange']++;
       }
     }
@@ -53,9 +53,11 @@ function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFall
     return finalArray;
 }
 
-const house =[7,11];
-const fruitFallenPosition =[5,15];
+const start =7;
+const end =11;
+const localApple=5;
+const localOrange=15;
 const numberFruitFall =[3,2];
 const appleFall =[-2,2,1];
 const orangeFall =[5,-6];
-console.log(fruit(house, fruitFallenPosition,numberFruitFall,appleFall,orangeFall))
+console.log(fruit(start,end,localApple,localOrange, appleFall, orangeFall))
