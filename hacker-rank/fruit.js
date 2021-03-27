@@ -44,8 +44,7 @@ function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFall
         treeObject['orange']++;
       }
     }
-    console.log(orangeDistance)
-    console.log(appleDistance, orangeDistance)
+
     return treeObject
 }
 
@@ -53,5 +52,5 @@ const house =[7,11];
 const fruitFallenPosition =[5,15];
 const numberFruitFall =[3,2];
 const appleFall =[-2,2,1];
-const orangeFall =[5,6];
+const orangeFall =[5,-6];
 console.log(fruit(house, fruitFallenPosition,numberFruitFall,appleFall,orangeFall))
