@@ -8,9 +8,13 @@
 
 
 
-function kangaroo (value1,value2){
+function fruit (value1,value2,value3,value4,value5){
 
 }
 
-
-console.log(kangaroo(3,4))
+const house =[7,11];
+const fruitFallenPosition =[5,15];
+const numberFruitFall =[3,2];
+const appleFall =[-2,2,1];
+const orangeFall =[5,6];
+console.log(fruit(house, fruitFallenPosition,numberFruitFall,appleFall,orangeFall))
