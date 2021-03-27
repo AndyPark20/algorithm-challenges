@@ -10,26 +10,30 @@
 
 function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFallPosition){
     //create a variable for the new distances for apples and oranges array and assign an empty array.
-    //create a variable for the finalResult and assign an empty array
+    //create a variable for the finalResult and assign an empty object
     //Loop thru the distance in the apples array and add it to the origin position on the apple tree
     //Loop thru the distance in the oranges array and add it to the origin position on the orange tree
     //push the new distance number in the array for apples and oranges
 
     //loop thru the positioned array for both apples and oranges
     //If value at index is greater or equal to 7 and less than or equal to 11
-      //push it into finalResult array
+      //add 1 to the object
+    //else
+      // do nothing
 
     const appleDistance=[];
     const orangeDistance=[];
-    const finalArray=[];
+    const
 
     for (let i=0;i<appleFallPosition.length;i++){
       appleDistance.push(appleFallPosition[i]+ fruitFallenPosition[0]);
+      if()
     }
 
     for (let x=0;x<orangeFallPosition.length;x++){
       orangeDistance.push(orangeFallPosition[x]+fruitFallenPosition[1]);
     }
+
 
 
 
