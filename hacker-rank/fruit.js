@@ -23,21 +23,30 @@ function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFall
 
     const appleDistance=[];
     const orangeDistance=[];
-    const
+    const treeObject ={apple:0,orange:0};
 
     for (let i=0;i<appleFallPosition.length;i++){
       appleDistance.push(appleFallPosition[i]+ fruitFallenPosition[0]);
-      if()
     }
 
     for (let x=0;x<orangeFallPosition.length;x++){
       orangeDistance.push(orangeFallPosition[x]+fruitFallenPosition[1]);
     }
 
+    for (let i=0;i<appleDistance.length; i++){
+      if(appleDistance[i]>=7 && appleDistance[i]<=11){
+        treeObject['apple']++;
+      }
+    }
 
-
-
-
+    for (let i=0;i<orangeDistance.length;i++){
+      if(orangeDistance[i]>=7 && orangeDistance[i]<=11){
+        treeObject['orange']++;
+      }
+    }
+    console.log(orangeDistance)
+    console.log(appleDistance, orangeDistance)
+    return treeObject
 }
 
 const house =[7,11];
