@@ -11,6 +11,7 @@
 function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFallPosition){
     //create a variable for the new distances for apples and oranges array and assign an empty array.
     //create a variable for the finalResult and assign an empty object
+    //create a variable for the finalArray and assign an empty Array
     //Loop thru the distance in the apples array and add it to the origin position on the apple tree
     //Loop thru the distance in the oranges array and add it to the origin position on the orange tree
     //push the new distance number in the array for apples and oranges
@@ -24,6 +25,7 @@ function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFall
     const appleDistance=[];
     const orangeDistance=[];
     const treeObject ={apple:0,orange:0};
+    const finalArray=[];
 
     for (let i=0;i<appleFallPosition.length;i++){
       appleDistance.push(appleFallPosition[i]+ fruitFallenPosition[0]);
@@ -45,7 +47,10 @@ function fruit (house,treePosition,totalFruitFallen,appleFallPosition,orangeFall
       }
     }
 
-    return treeObject
+    for (const keys in treeObject){
+      finalArray.push(treeObject[keys])
+    }
+    return finalArray;
 }
 
 const house =[7,11];
