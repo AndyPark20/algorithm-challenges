@@ -25,17 +25,18 @@ function fruit (s,t,a,b,apples,oranges){
     const appleDistance=[];
     const orangeDistance=[];
     const treeObject ={apple:0,orange:0};
-    const finalArray=[];
+    let finalApple=0;
+    let finalOrange=0;
 
-    for (let i=0;i<appleFallPosition.length;i++){
-      appleDistance.push(appleFallPosition[i]+ t[0]);
+    for (let i=0;i<apples.length;i++){
+      appleDistance.push(apples[i]+ a);
     }
 
-    for (let x=0;x<orangeFallPosition.length;x++){
-      orangeDistance.push(orangeFallPosition[x]+t[1]);
+    for (let x=0;x<oranges.length;x++){
+      orangeDistance.push(oranges[x]+b);
     }
 
-    for (let i=0;i<appleDistance.length; i++){
+    for (let i=0;i<appleDistance.length;i++){
       if(appleDistance[i]>=s && appleDistance[i]<=t){
         treeObject['apple']++;
       }
@@ -43,14 +44,15 @@ function fruit (s,t,a,b,apples,oranges){
 
     for (let i=0;i<orangeDistance.length;i++){
       if(orangeDistance[i]>=s && orangeDistance[i]<=t){
-        treeObject['orange']++;
+        treeObject['orange']++
       }
     }
 
-    for (const keys in treeObject){
-      finalArray.push(treeObject[keys])
-    }
-    return finalArray;
+    finalApple = treeObject.apple;
+    finalOrange= treeObject.orange;
+
+    console.log(finalApple + '\n' +finalOrange)
+
 }
 
 const start =7;
