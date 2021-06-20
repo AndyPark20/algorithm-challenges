@@ -5,23 +5,35 @@ If k > 0, replace the ith number with the sum of the next k numbers.
 If k < 0, replace the ith number with the sum of the previous k numbers.
 If k == 0, replace the ith number with 0.
 As code is circular, the next element of code[n-1] is code[0], and the previous element of code[0] is code[n-1].
-
-Given the circular array code and an integer key k, return the decrypted code to defuse the bomb!
- ***/
-
+Given the circular array code and an integer key k, return the decrypted code to defuse the bomb!***/
 const k = 3;
 const code = [5, 7, 1, 4];
+// 7,1,4,5=12
+// 1,4,5,7=10
+// 4,5,7,1=16
+// 5,7,1,4=13
+
 var decrypt = function (code, k){
   let number = 0;
+  let array=[];
   //if k >0;
   //loop thru the code;
-  //if i is not the value at index i, add the value at index i to the variable sum;
-  code.forEach((index, value) => {
-    if (index !== index) {
-      number += value[index];
-    }
-    console.log(number);
-  })
-};
+  //add the first value into the last array
+if(k>0){
+  for (let i = 0; i < code.length; i++) {
+    let shifted = code.shift();
+    code.push(shifted);
+    for (let z = 0; z < k; z++) {
+      number += code[z];
 
-console.log(decrypt());
+    }
+    array.push(number);
+    console.log(array)
+  }
+
+}
+
+  //if i is not the value at index i, add the value at index i to the variable sum;
+
+};
+console.log(decrypt(code, k));
