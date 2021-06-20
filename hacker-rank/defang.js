@@ -10,13 +10,12 @@ Example 2:
 Input: address = "255.100.50.0"
 Output: "255[.]100[.]50[.]0"*/
 
-function defang(){
-  //Use the split method to push the string into array by ''
-  //loop thru the array
-  //if the index at value i is equal to .
-  //push the . to an array.
-  // if the index at value i is equal to 1
-  //push 1 to an empty string.
+function defang(address){
+//use the replaceAll() to replace . with [.] in a string
+// if wanting to replace only a character use replace();
 
-
+  let replaced = address.replaceAll('.','[.]')
+  return replaced
 }
+const address = "1.1.1.1";
+console.log(defang(address))
