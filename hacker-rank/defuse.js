@@ -7,7 +7,7 @@ If k == 0, replace the ith number with 0.
 As code is circular, the next element of code[n-1] is code[0], and the previous element of code[0] is code[n-1].
 
 Given the circular array code and an integer key k, return the decrypted code to defuse the bomb!
- */
+ ***/
 
 const k = 3;
 const code = [5, 7, 1, 4];
@@ -24,4 +24,4 @@ var decrypt = function (code, k){
   })
 };
 
-console.log(decrypt())
+console.log(decrypt());
