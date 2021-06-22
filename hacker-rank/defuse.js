@@ -17,16 +17,15 @@ var decrypt = function (code, k) {
   let number = 0;
   let array = [];
   //if k >0;
-  //loop thru the code;
-  //add the first value into the last array
-  if (k > 0) {
-    for (let i = 0; i < code.length; i++) {
-      let shifted = code.shift();
-      code.push(shifted);
-      for (let z = 0; z <k; z++) {
-      }
-    }
-    //if i is not the value at index i, add the value at index i to the variable sum;
+  //loop thru the code array
+  //use shift() to remove the first value
+  //use push() to pushj the deleted item into the back of the array;
+  // loop thru the re-assigned array with conditional looping up to length of 3.
+  for (let i=0; i<code.length;i++){
+
   }
+
+
+
 }
 console.log(decrypt(code, k));
