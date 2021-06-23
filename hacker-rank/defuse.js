@@ -26,7 +26,7 @@ var decrypt = function (code, k) {
   for (let i = 0; i < code.length; i++) {
     let deletedValue = code.shift();
     code.push(deletedValue);
-
+    console.log(code)
   }
 }
 console.log(decrypt(code, k));
