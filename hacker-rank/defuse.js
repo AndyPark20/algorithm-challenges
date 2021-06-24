@@ -21,12 +21,15 @@ var decrypt = function (code, k) {
   //use shift() to remove the first value
   //use push() to pushj the deleted item into the back of the array;
   // loop thru the re-assigned array with conditional looping up to length of k
-  //Add values to number
+  //Add values to number up to values of index of 3
   // push the number to the array
   for (let i = 0; i < code.length; i++) {
     let deletedValue = code.shift();
     code.push(deletedValue);
-    console.log(code)
+    for(let z=0; z<k; z++){
+      number +=code[i]
+    }
+    console.log('number')
   }
 }
 console.log(decrypt(code, k));
