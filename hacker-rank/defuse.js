@@ -13,28 +13,20 @@ const code = [5, 7, 1, 4];
 // 4,5,7,1=16
 // 5,7,1,4=13
 
-var decrypt = function (code, k){
+var decrypt = function (code, k) {
   let number = 0;
-  let array=[];
+  let array = [];
   //if k >0;
-  //loop thru the code;
-  //add the first value into the last array
-if(k>0){
+  //loop thru the code array
+  //use shift() to remove the first value
+  //use push() to pushj the deleted item into the back of the array;
+  // loop thru the re-assigned array with conditional looping up to length of k
+  //Add values to number
+  // push the number to the array
   for (let i = 0; i < code.length; i++) {
-    let shifted = code.shift();
-    code.push(shifted);
-    console.log('code',code)
-    for (let z = 0; z < k; z++) {
-      number += code[z];
-
-    }
-    array.push(number);
-    console.log(array)
+    let deletedValue = code.shift();
+    code.push(deletedValue);
+    console.log(code)
   }
-
 }
-
-  //if i is not the value at index i, add the value at index i to the variable sum;
-
-};
 console.log(decrypt(code, k));
