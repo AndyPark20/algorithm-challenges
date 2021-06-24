@@ -6,7 +6,7 @@ If k < 0, replace the ith number with the sum of the previous k numbers.
 If k == 0, replace the ith number with 0.
 As code is circular, the next element of code[n-1] is code[0], and the previous element of code[0] is code[n-1].
 Given the circular array code and an integer key k, return the decrypted code to defuse the bomb!***/
-const k = 3;
+const k = 0;
 const code = [5, 7, 1, 4];
 // 7,1,4,5=12
 // 1,4,5,7=10
@@ -21,15 +21,31 @@ var decrypt = function (code, k) {
   //use shift() to remove the first value
   //use push() to pushj the deleted item into the back of the array;
   // loop thru the re-assigned array with conditional looping up to length of k
-  //Add values to number up to values of index of 3
-  // push the number to the array
-  for (let i = 0; i < code.length; i++) {
-    let deletedValue = code.shift();
-    code.push(deletedValue);
-    for(let z=0; z<k; z++){
-      number +=code[i]
+  //Add values to number up to index of k
+  // push the value to number
+  // restart the number at 0
+  // if K<0;
+
+  if(k===0){
+    for(let t=0;t<code.length;t++){
+      code.splice(t,1,0);
     }
-    console.log('number')
+    return code
+  }
+
+  if (k > 0) {
+    for (let i = 0; i < code.length; i++) {
+      let deletedValue = code.shift();
+      code.push(deletedValue);
+      for (let z = 0; z < k; z++) {
+        number += code[z]
+      }
+      array.push(number);
+      number = 0;
+    }
+    return array;
+  }else{
+
   }
 }
 console.log(decrypt(code, k));
