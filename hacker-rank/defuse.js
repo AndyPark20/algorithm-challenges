@@ -23,6 +23,7 @@ if(k>0){
   for (let i = 0; i < code.length; i++) {
     let shifted = code.shift();
     code.push(shifted);
+    console.log('code',code)
     for (let z = 0; z < k; z++) {
       number += code[z];
 
