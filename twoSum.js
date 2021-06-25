@@ -21,9 +21,14 @@ var twoSum = function (nums, target) {
   const object ={};
   const length = nums.length;
   for(let i=0;i<length;i++){
-    object[target-nums[i]]=i;
+    object[nums[i]]=i;
   }
-  console.log(object)
+  for(let i=0;i<length;i++){
+    let diff = target-nums[i];
+    if(object.hasOwnProperty(diff) && object[diff] !==i){
+      return [i, object[diff]]
+    }
+  }
 };
 
 nums = [3, 2, 4], target = 6
