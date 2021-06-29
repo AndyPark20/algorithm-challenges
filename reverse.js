@@ -34,14 +34,17 @@ var reverse = function (x) {
 let convertString = x.toString();
 let splitString=convertString.split('');
 let checkedString='';
+let finalCheckedString =0;
 for (let i=splitString.length-1;i>=0;i--){
   if(splitString[i] !=='-'){
     checkedString+=splitString[i]
   }else{
-    checkedString += splitString[i];
+    splitString[i]+checkedString;
   }
+  console.log(checkedString)
 }
-return checkedString
+
+return parseInt(checkedString)
 };
 
 let input = -123
