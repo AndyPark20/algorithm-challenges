@@ -26,7 +26,7 @@ var reverse = function (x) {
 //turn the number into strings
 //split the strings by each character and put them into an array
 //loop the array backwards and check if the values at index i is a number.
-  //if it is a number then put it into a variable that is assigned as an empty string.
+  //if it is anything besides '-' then put it into a variable that is assigned as an empty string.
   // if the value at index i is '-' then put the value at the first of the string
   //turn the string into integers
   //return integer
@@ -35,13 +35,12 @@ let convertString = x.toString();
 let splitString=convertString.split('');
 let checkedString='';
 for (let i=splitString.length-1;i>=0;i--){
-  if(typeof(parseInt(splitString[i]))==='number'){
+  if(splitString[i] !=='-'){
     checkedString+=splitString[i]
+  }else{
+    console.log(splitString[i])
+    // splitString[i] + checkedString;
   }
-  if(splitString[i]==='-'){
-    splitString[i] + checkedString;
-  }
-}
 return checkedString
 };
 
