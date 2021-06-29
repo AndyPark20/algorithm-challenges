@@ -23,6 +23,17 @@ Constraints:
 -231 <= x <= 231 - 1*/
 
 var reverse = function (x) {
+//turn the number into strings
+//split the strings by each character and put them into an array
+//loop the array backwards and check if the values at index i is a number.
+  //if it is a number then put it into a variable that is assigned as an empty string.
+  // if the value at index i is '-' then put the value at the first of the string
+  //turn the string into integers
+  //return integer
+
+let convertString = x.toString();
+console.log(convertString)
+
 
 };
 
