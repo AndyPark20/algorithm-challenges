@@ -38,9 +38,9 @@ for (let i=splitString.length-1;i>=0;i--){
   if(splitString[i] !=='-'){
     checkedString+=splitString[i]
   }else{
-    console.log(splitString[i])
-    // splitString[i] + checkedString;
+    checkedString += splitString[i];
   }
+}
 return checkedString
 };
 
