@@ -25,3 +25,6 @@ Constraints:
 var reverse = function (x) {
 
 };
+
+let input = -123
+console.log(reverse(input));
