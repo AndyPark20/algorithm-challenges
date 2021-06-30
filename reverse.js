@@ -35,6 +35,11 @@ let convertString = x.toString();
 let splitString=convertString.split('');
 let checkedArray=[];
 let final =''
+
+if(convertString ==='0'){
+  return 0;
+}
+
 for (let i=splitString.length-1;i>=0;i--){
   if(splitString[i] ==='-'){
     checkedArray.unshift(splitString[i]);
@@ -53,5 +58,5 @@ for (let i=0; i<checkedArray.length;i++){
 return parseInt(final)
 };
 
-let input = 012
+let input = 0
 console.log(reverse(input));
