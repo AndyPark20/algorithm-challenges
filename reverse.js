@@ -24,20 +24,26 @@ Constraints:
 
 var reverse = function (x) {
 //turn the number into strings
-//loop thru the string
-  //if string is not '-' add it to an empty variable called numbers
-  //if string is '-' concat it to numbers variable at index 0
-let string = x.toString()
-let number ='';
-for (let i=0;i<string.length;i++){
-  if(string[i] !=='-'){
-    number+=string[i];
+//split the strings by each character and put them into an array
+//loop the array backwards and check if the values at index i is a number.
+  //if it is anything besides '-' then put it into a variable that is assigned as an empty string.
+  // if the value at index i is '-' then put the value at the first of the string
+  //turn the string into integers
+  //return integer
 
+let convertString = x.toString();
+let splitString=convertString.split('');
+let checkedString='';
+let finalCheckedString =0;
+for (let i=splitString.length-1;i>=0;i--){
+  if(splitString[i] !=='-'){
+    checkedString+=splitString[i]
+  }else{
+    checkedString.splice(0,0,splitString[i])
   }
-
 }
-return number;
 
+return checkedString
 };
 
 let input = -123
