@@ -37,12 +37,11 @@ let checkedString='';
 let finalCheckedString =0;
 for (let i=splitString.length-1;i>=0;i--){
   if(splitString[i] ==='-'){
-    splitString[i] + checkedString;
+    checkedString += splitString[i]
   }else{
     checkedString += splitString[i]
   }
 }
-
 return parseInt(checkedString)
 };
 
