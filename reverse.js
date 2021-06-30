@@ -29,8 +29,14 @@ var reverse = function (x) {
   //if string is '-' concat it to numbers variable at index 0
 let string = x.toString()
 let number ='';
-for (let i=0;i<)
+for (let i=0;i<string.length;i++){
+  if(string[i] !=='-'){
+    number+=string[i];
 
+  }
+
+}
+return number;
 
 };
 
