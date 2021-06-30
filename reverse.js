@@ -35,19 +35,19 @@ let convertString = x.toString();
 let splitString=convertString.split('');
 let checkedArray=[];
 let final =''
-for (let i=splitString.length;i>=0;i--){
+for (let i=splitString.length-1;i>=0;i--){
   if(splitString[i] ==='-'){
-    checkedArray[0]=splitString[i];
+    checkedArray.unshift(splitString[i]);
   }else{
     checkedArray.push(splitString[i])
   }
 }
+
 for (let i=0; i<checkedArray.length;i++){
   final+=checkedArray[i];
-
 }
 return parseInt(final)
 };
 
-let input = -123
+let input = 012
 console.log(reverse(input));
