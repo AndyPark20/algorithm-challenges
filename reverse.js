@@ -58,5 +58,5 @@ for (let i=0; i<checkedArray.length;i++){
 return parseInt(final)
 };
 
-let input = 0
+let input = 901000
 console.log(reverse(input));
