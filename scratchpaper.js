@@ -3,4 +3,4 @@ let result = data.toString()
 console.log(result)
 
 console.log('hello');
-console.log()
+console.log('')
