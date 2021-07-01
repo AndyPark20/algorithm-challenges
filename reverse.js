@@ -46,18 +46,16 @@ for (let i=splitString.length-1;i>=0;i--){
   }else{
     checkedArray.push(splitString[i])
   }
-
 }
 
+
 for (let i=0; i<checkedArray.length;i++){
-  if(checkedArray[i] !=='0'){
     final += checkedArray[i];
-  }
+
 
 }
 return parseInt(final)
 };
 
-let input = 901000
+let input = 120
 console.log(reverse(input));
-console.log('hello')
