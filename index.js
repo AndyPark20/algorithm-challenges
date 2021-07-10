@@ -238,6 +238,39 @@ Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will 
 */
 
 
+var findLeastNumOfUniqueInts = function (arr, k) {
+    //create a variable and assign an empty object
+    //iterate thru the array
+        // if the value is not in the object insert it
+        // if the value is in the object then, increment it
+    //iterate thru the object
+        // if the property value is less than k OR equal to, then decrement it.
+        // return the length of the object.
+      const hist ={};
+      const leftOver ={};
+      for(let i=0;i<arr.length;i++){
+        if(arr[i] in hist){
+          hist[arr[i]]++;
+        }else{
+          hist[arr[i]]=1;
+        }
+      }
+      for(const key in hist){
+        if(hist[key]<=k || hist[key]>=k){
+          hist[key]--;
+          if(hist[key] !==0){
+            leftOver[key] = hist[key];
+          }
+        }
+      }
+      console.log(hist)
+      return Object.keys(leftOver).length;
+};
+
+// console.log(findLeastNumOfUniqueInts([5, 5, 4],1))
+// console.log(findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2],3))
+console.log(findLeastNumOfUniqueInts([2, 1, 1, 3, 3, 3],3))
+=======
 // var findLeastNumOfUniqueInts = function (arr, k) {
 
 //create a variable and assign an empty object
@@ -291,3 +324,7 @@ var reverseString = function (s) {
 };
 
 console.log(reverseString(["h", "e", "l", "l", "o"]))
+
+
+
+>>>>>>> ad1c402f060f923dfd8a39259431ebe8250bbe36
