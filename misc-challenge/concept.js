@@ -31,9 +31,16 @@ function baz(){
   }
   foo();
 }
+baz();
 
 baz();
 
+<<<<<<< HEAD
+//hoisting example:
+
+console.log(color);
+var color='red';
+=======
 //5.Asynchronous
 
 /* JavaScript is an asynchrnous, non-blocking that
@@ -74,3 +81,4 @@ where as  - will cause strings to get converted into number
 Where as statically typed language is checked during compile-time.
 
 example is var a =24 --> var a can be converted into var a = "String"*/
+>>>>>>> db357ba14054493ffe8d8b037555c72aef1f6ccb
