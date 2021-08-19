@@ -25,30 +25,51 @@
 
 
 function canConstruct(ransomNote, magazine) {
-//create empty objects for both ransomNote and magazine
-const ransomNoteObj = {};
-const magazinObj ={};
-let count=1;
+  //create empty objects for both ransomNote and magazine
+  const ransomNoteObj = {};
+  const magazinObj = {};
+  let count = 1;
 
-// use the split() method to assign strings from ransomNote and Magazine into an array
-//for ransomNote
-const ransomNoteArray = ransomNote.split('');
-// for magazine
-// const magazineArray = magazine.split('');
+  // use the split() method to assign strings from ransomNote and Magazine into an array
+  //for ransomNote
+  const ransomNoteArray = ransomNote.split('');
+  // for magazine
+  const magazineArray = magazine.split('');
 
-//iterate each ransomNoteArray and magazineArray
+  //iterate each ransomNoteArray and magazineArray
   // if values at index is the same as other values at different index
-    //add the value at index as key and count++ as the value pair
+  //add the value at index as key and count++ as the value pair
 
-// for ransomNote
-ransomNoteArray.forEach((values,index)=>{
-  if(ransomNoteObj[values]===undefined){
-    ransomNoteObj[values]=count;
-  }else{
-    ransomNoteObj[values]++;
+  // for ransomNote
+  ransomNoteArray.forEach((values, index) => {
+    if (ransomNoteObj[values] === undefined) {
+      ransomNoteObj[values] = count;
+    } else {
+      ransomNoteObj[values]++;
+    }
+  });
+
+  magazineArray.forEach((values, index) => {
+    if (magazinObj[values] === undefined) {
+      magazinObj[values] = count;
+    } else {
+      magazinObj[values]++;
+    }
+  });
+
+  //loop thru ransomNote Obj
+    //if the values at ransomnoteObj equals to magazine object values AND subtracted value is 0
+          //return true
+    //else
+          //return false;
+  for(let keys in ransomNoteObj){
+    if ((ransomNoteObj[keys] === magazinObj[keys]) && ((ransomNoteObj[keys] - magazinObj[keys] ===0)||
+      (magazinObj[keys] - ransomNoteObj[keys] >=0))){
+      return true;
+    }else{
+      return false;
+    }
   }
-});
-return ransomNoteObj
 };
 
-console.log(canConstruct('aabbb'))
+console.log(canConstruct('aa', 'aa'))
