@@ -42,12 +42,13 @@ const ransomNoteArray = ransomNote.split('');
 
 // for ransomNote
 ransomNoteArray.forEach((values,index)=>{
-  if(ransomNoteArray.indexOf(values) !== index){
-    ransomNoteObj[values] = count++;
-    debugger;
+  if(ransomNoteObj[values]===undefined){
+    ransomNoteObj[values]=count;
+  }else{
+    ransomNoteObj[values]++;
   }
-})
-return ransomNoteObj;
+});
+return ransomNoteObj
 };
 
 console.log(canConstruct('aabbb'))
