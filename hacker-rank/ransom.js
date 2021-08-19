@@ -23,7 +23,7 @@
 // 1 <= ransomNote.length, magazine.length <= 105
 // ransomNote and magazine consist of lowercase English letters.
 
-
+console.log('hello')
 
 var canConstruct = function (ransomNote, magazine) {
 //assign strings from ransomNote and magazine into an object
