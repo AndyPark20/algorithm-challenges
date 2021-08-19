@@ -34,11 +34,20 @@ let count=1;
 //for ransomNote
 const ransomNoteArray = ransomNote.split('');
 // for magazine
-const magazineArray = magazine.split('');
+// const magazineArray = magazine.split('');
 
 //iterate each ransomNoteArray and magazineArray
-  // if values at index is the same
+  // if values at index is the same as other values at different index
     //add the value at index as key and count++ as the value pair
+
+// for ransomNote
+ransomNoteArray.forEach((values,index)=>{
+  if(ransomNoteArray.indexOf(values) !== index){
+    ransomNoteObj[values] = count++;
+    debugger;
+  }
+})
+return ransomNoteObj;
 };
 
 console.log(canConstruct('aabbb'))
