@@ -23,18 +23,22 @@
 // 1 <= ransomNote.length, magazine.length <= 105
 // ransomNote and magazine consist of lowercase English letters.
 
-console.log('hello')
 
-var canConstruct = function (ransomNote, magazine) {
-//assign strings from ransomNote and magazine into an object
-const ransomeNoteObj = {};
+function canConstruct(ransomNote, magazine) {
+//create empty objects for both ransomNote and magazine
+const ransomNoteObj = {};
 const magazinObj ={};
-let i=0;
-//if there are more than one same key, increment i++
-ransomNote.forEach((values)=>{
-  ransomeNoteObj[values] = i++;
-})
-console.log(Object.values(ransomeNoteObj)
+let count=1;
+
+// use the split() method to assign strings from ransomNote and Magazine into an array
+//for ransomNote
+const ransomNoteArray = ransomNote.split('');
+// for magazine
+const magazineArray = magazine.split('');
+
+//iterate each ransomNoteArray and magazineArray
+  // if values at index is the same
+    //add the value at index as key and count++ as the value pair
 };
 
-console.log(canConstruct('aa'))
+console.log(canConstruct('aabbb'))
