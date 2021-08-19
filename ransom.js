@@ -24,13 +24,22 @@
 // ransomNote and magazine consist of lowercase English letters.
 
 
-function canConstruct(ransomNote, magazine) {
+var canConstruct = function (ransomNote, magazine) {
   //create empty objects for both ransomNote and magazine
   const ransomNoteObj = {};
   const magazinObj = {};
   let count = 1;
 
-  // use the split() method to assign strings from ransomNote and Magazine into an array
+  //Array for storing current Status
+  let currentStatus = [];
+
+  //if ransomNote length is greater than magazine length
+  // return false
+  if (ransomNote.length > magazine.length) {
+    return false;
+  }
+  //else use the split() method to assign strings from ransomNote and Magazine into an array
+
   //for ransomNote
   const ransomNoteArray = ransomNote.split('');
   // for magazine
@@ -58,18 +67,27 @@ function canConstruct(ransomNote, magazine) {
   });
 
   //loop thru ransomNote Obj
-    //if the values at ransomnoteObj equals to magazine object values AND subtracted value is 0
-          //return true
-    //else
-          //return false;
-  for(let keys in ransomNoteObj){
-    if ((ransomNoteObj[keys] === magazinObj[keys]) && ((ransomNoteObj[keys] - magazinObj[keys] ===0)||
-      (magazinObj[keys] - ransomNoteObj[keys] >=0))){
-      return true;
-    }else{
-      return false;
+  //if value is found at magazineObj && if the values equal to 0 or if value is greater than 0 when object subtraction is flipped
+  //push true to current status empty array
+  //else
+  //push false to current status empty array
+  for (let keys in ransomNoteObj) {
+    if ((magazinObj[keys]) && ((ransomNoteObj[keys] - magazinObj[keys] === 0) ||
+      (magazinObj[keys] - ransomNoteObj[keys] >= 0))) {
+      currentStatus.push(true)
+    } else {
+      currentStatus.push(false)
     }
   }
+
+  //loop thru currentstatus and if false in included return false
+      //else return true
+  if (currentStatus.includes(false)) {
+    return false;
+  } else {
+    return true;
+  }
+
 };
 
-console.log(canConstruct('aa', 'aa'))
+console.log(canConstruct("aabb", "aaabbbbbbb"))
