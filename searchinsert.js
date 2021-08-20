@@ -36,7 +36,7 @@ var searchInsert = function (nums, target) {
   //use Sort method to check if target includes in the num
     //if so, return index
     //else, push the target num to updatedArrayofNumbers
-    //loop thru and if the values at index equals target return index
+    //use indexOf to return the index of matching value
 
 let copiedArrayOfNumbers =nums;
 const indexOfValue = nums.indexOf(target);
@@ -45,13 +45,10 @@ if(indexOfValue !==-1){
 }else{
   copiedArrayOfNumbers.push(target);
   copiedArrayOfNumbers.sort((a,b)=>a-b);
-  copiedArrayOfNumbers.forEach((values,index)=>{
-    if(values === target){
-     return index;
-    }
-  })
+  return copiedArrayOfNumbers.indexOf(target);
 }
+
 
 };
 
-console.log(searchInsert([1, 3, 5, 6],10))
+console.log(searchInsert([1, 3, 5, 6],6))
