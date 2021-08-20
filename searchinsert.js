@@ -33,25 +33,25 @@ Output: 0
  * @return {number}
  */
 var searchInsert = function (nums, target) {
-  //loop thru the array
-  // if the value matches the target,
-    //return index number
- //else
-  //push the target into the  copiedArrayofNumbers array
-  //use sort to sort the nums from smallest to largest
-  //use indexof to find the index of the target value in the nums array
-let copiedArrayOfNumbers =nums;
+  //use Sort method to check if target includes in the num
+    //if so, return index
+    //else, push the target num to updatedArrayofNumbers
+    //loop thru and if the values at index equals target return index
 
- nums.forEach((values,index)=>{
-   if (values ===target){
-     return target;
-   }else{
-     copiedArrayOfNumbers.push(target);
-   }
- })
-  copiedArrayOfNumbers.sort();
-  console.log(copiedArrayOfNumbers)
-  // return copiedArrayOfNumbers.indexOf(target);
+let copiedArrayOfNumbers =nums;
+const indexOfValue = nums.indexOf(target);
+if(indexOfValue !==-1){
+  return indexOfValue;
+}else{
+  copiedArrayOfNumbers.push(target);
+  copiedArrayOfNumbers.sort((a,b)=>a-b);
+  copiedArrayOfNumbers.forEach((values,index)=>{
+    if(values === target){
+     return index;
+    }
+  })
+}
+
 };
 
 console.log(searchInsert([1, 3, 5, 6],10))
