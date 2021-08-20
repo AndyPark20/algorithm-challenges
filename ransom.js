@@ -33,75 +33,43 @@ var canConstruct = function (ransomNote, magazine) {
         // return true;
         //else false;
 
-  const hashMapObjectRansomNote =
-  const hashMapOBjectMagazine =
+  const hashMapObjectRansomNote =convertStringToHashMap(ransomNote);
+  const hashMapObjectMagazine =convertStringToHashMap(magazine);
 
+  //Auxillary function to convert a string into Array and creating hashMap Objects
   function convertStringToHashMap(string){
-    //use Split method to convert string to array
+    let hashMapObject ={};
+    let count =1;
     const convertedArray =string.split('');
-
     //loop thru the converted Array and assign the values as key, and increment
     //count if there are more than one identical key and set it as a value
+    convertedArray.forEach(values=>{
+      if(!hashMapObject[values]){
+        hashMapObject[values] = count;
+      }else{
+        hashMapObject[values]++;
+      }
+    })
+    return hashMapObject
   }
 
-  //Array for storing current Status
-  let currentStatus = [];
-
-  //if ransomNote length is greater than magazine length
-  // return false
-  if (ransomNote.length > magazine.length) {
+  if(ransomNote.length >magazine.length){
     return false;
   }
-  //else use the split() method to assign strings from ransomNote and Magazine into an array
 
-  //for ransomNote
-  const ransomNoteArray = ransomNote.split('');
-  // for magazine
-  const magazineArray = magazine.split('');
-
-  //iterate each ransomNoteArray and magazineArray
-  // if values at index is the same as other values at different index
-  //add the value at index as key and count++ as the value pair
-
-  // for ransomNote
-  ransomNoteArray.forEach((values, index) => {
-    if (ransomNoteObj[values] === undefined) {
-      ransomNoteObj[values] = count;
-    } else {
-      ransomNoteObj[values]++;
-    }
-  });
-
-  magazineArray.forEach((values, index) => {
-    if (magazinObj[values] === undefined) {
-      magazinObj[values] = count;
-    } else {
-      magazinObj[values]++;
-    }
-  });
-
-  //loop thru ransomNote Obj
-  //if value is found at magazineObj && if the values equal to 0 or if value is greater than 0 when object subtraction is flipped
-  //push true to current status empty array
-  //else
-  //push false to current status empty array
-  for (let keys in ransomNoteObj) {
-    if ((magazinObj[keys]) && ((ransomNoteObj[keys] - magazinObj[keys] === 0) ||
-      (magazinObj[keys] - ransomNoteObj[keys] >= 0))) {
-      currentStatus.push(true)
-    } else {
-      currentStatus.push(false)
-    }
+  //Loop thru one of the hashmaps and check if the other object has the same key
+ let currentStatus =false;
+  for (let keys in hashMapObjectRansomNote){
+    if((hashMapObjectMagazine[keys]) && (hashMapObjectRansomNote[keys]- hashMapObjectMagazine[keys] ===0 ||
+      hashMapObjectMagazine[keys] - hashMapObjectRansomNote[keys] >=0)){
+        currentStatus =true;
+      }else{
+        return false;
+      }
   }
-
-  //loop thru currentstatus and if false in included return false
-      //else return true
-  if (currentStatus.includes(false)) {
-    return false;
-  } else {
-    return true;
-  }
-
+  return currentStatus;
+console.log(hashMapObjectRansomNote);
+console.log(hashMapObjectMagazine)
 };
 
-console.log(canConstruct("aabb", "aaabbbbbbb"))
+console.log(canConstruct("fihjjjjei", "hjibagacbhadfaefdjaeaebgi"))
