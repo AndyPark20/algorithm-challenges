@@ -68,8 +68,7 @@ var canConstruct = function (ransomNote, magazine) {
       }
   }
   return currentStatus;
-console.log(hashMapObjectRansomNote);
-console.log(hashMapObjectMagazine)
+
 };
 
 console.log(canConstruct("fihjjjjei", "hjibagacbhadfaefdjaeaebgi"))
