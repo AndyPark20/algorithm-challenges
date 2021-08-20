@@ -25,7 +25,14 @@
 
 
 var canConstruct = function (ransomNote, magazine) {
-  //create empty objects for both ransomNote and magazine
+  //Create a function that will take a string as an argument and return array via split method
+  //loop thru the array and create a hashmap object for the arguments and assign key value pair
+    //loop thru the hashmap object
+    //if the other hashmap object has the key && hashmapObjA value - hashMapObjB value is equal to zero
+    // Or if the value subtracted flipped is greater than 0
+        // return true;
+        //else false;
+
   const ransomNoteObj = {};
   const magazinObj = {};
   let count = 1;
