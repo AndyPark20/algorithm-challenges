@@ -33,5 +33,24 @@ Output: 0
  * @return {number}
  */
 var searchInsert = function (nums, target) {
+  //loop thru the array
+  // if the value matches the target,
+    //return index number
+ //else
+  //push the target into the nums array
+  //use sort to sort the nums from smallest to largest
+  //use indexof to find the index of the target value in the nums array
 
+ nums.forEach((values,index)=>{
+   debugger;
+   if (values ===target){
+     return target;
+   }else{
+     nums.push(target);
+    nums.sort();
+   }
+ })
+  return nums.indexOf(target);
 };
+
+console.log(searchInsert([1, 3, 5, 6],10))
