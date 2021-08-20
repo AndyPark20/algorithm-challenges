@@ -33,9 +33,16 @@ var canConstruct = function (ransomNote, magazine) {
         // return true;
         //else false;
 
-  const ransomNoteObj = {};
-  const magazinObj = {};
-  let count = 1;
+  const hashMapObjectRansomNote =
+  const hashMapOBjectMagazine =
+
+  function convertStringToHashMap(string){
+    //use Split method to convert string to array
+    const convertedArray =string.split('');
+
+    //loop thru the converted Array and assign the values as key, and increment
+    //count if there are more than one identical key and set it as a value
+  }
 
   //Array for storing current Status
   let currentStatus = [];
