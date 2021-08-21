@@ -10,8 +10,7 @@ function palindrome (stringPalindrome){
 
     const hashmapPalindromeObject ={};
     let count =1;
-
-
+    let currentStatus=false;
     //creating hashmapObject
     for(let i =0; i<stringPalindrome.length;i++){
       if(!hashmapPalindromeObject[stringPalindrome[i]]){
@@ -20,14 +19,15 @@ function palindrome (stringPalindrome){
         hashmapPalindromeObject[stringPalindrome[i]]++
       }
     }
-
+    console.log(hashmapPalindromeObject)
     //Checking to see if the values from hashmapPalindromObject is divisble by 2 to make it equal 0
     for(let keys in hashmapPalindromeObject){
-      if(hashmapPalindromeObject[keys] %2 ===0){
-        return true;
+      if(hashmapPalindromeObject[keys] %2 ===0 || Object.values(hashmapPalindromeObject).length ===1){
+        currentStatus=true;
       }
       return false;
     }
+    return currentStatus
 }
 
-console.log(palindrome("aaa"))
+console.log(palindrome(""))
