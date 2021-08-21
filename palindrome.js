@@ -24,10 +24,12 @@ function palindrome (stringPalindrome){
     for(let keys in hashmapPalindromeObject){
       if(hashmapPalindromeObject[keys] %2 ===0 || Object.values(hashmapPalindromeObject).length ===1){
         currentStatus=true;
+      }else{
+        return false;
       }
-      return false;
+
     }
     return currentStatus
 }
 
-console.log(palindrome(""))
+console.log(palindrome("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab"))
