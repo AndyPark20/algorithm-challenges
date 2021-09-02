@@ -12,9 +12,10 @@ function twoNumberSum(array, targetSum) {
   const finalResultArray =[];
   let targetValueDiff=null;
 
-  array.forEach(values=>{
+
+  array.forEach((values,index)=>{
     targetValueDiff = targetSum-values;
-    if(array.includes(targetValueDiff)){
+    if(array.includes(targetValueDiff) &&  targetValueDiff !==array[index]){
       finalResultArray.push(array[array.indexOf(targetValueDiff)])
     }
     return [];
@@ -23,4 +24,4 @@ function twoNumberSum(array, targetSum) {
 
 }
 
-console.log(twoNumberSum([1,4,8,8,5], 16))
+console.log(twoNumberSum([3,5,-4,8,11,1,-1,6], 10))
