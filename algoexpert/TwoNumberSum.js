@@ -1,33 +1,21 @@
 
- //Create final empty result Array
-//Loop thru the array and create a hashmap object
-    //find the difference between targetSum and values in the hashmap object.
-      //if values at hashma Object is true,
-          //push the value into result array;
-     //if not
-          //return empty array
+
 
 
 function twoNumberSum(array, targetSum) {
 
   const finalResultArray =[];
-  const hashMapObject ={};
+  let targetValueDiff=null;
 
-  array.forEach((values,index)=>{
-    hashMapObject[index] = values;
+  array.forEach(values=>{
+    targetValueDiff = targetSum-values;
+    if(array.includes(targetValueDiff)){
+      finalResultArray.push(array[array.indexOf(targetValueDiff)])
+    }
+    return [];
   })
-
-  Object.values(hashMapObject).forEach((val,idx) => {
-    let diff = targetSum-val;
-    console.log(diff);
-    // console.log(val)
-    // if(val === diff){
-    //   return val
-    // }
-  })
-
-
+  return finalResultArray
 
 }
 
-console.log(twoNumberSum([1,4,9,6,5], 15))
+console.log(twoNumberSum([1,4,8,8,5], 16))
