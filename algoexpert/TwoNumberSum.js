@@ -4,6 +4,11 @@
 
 function twoNumberSum(array, targetSum) {
 
+  //Loop thru the array,
+    //find the difference value between target sum and array value at index
+    //if the difference is true, then push that value into the final result array
+    //if not return empty array;
+
   const finalResultArray =[];
   let targetValueDiff=null;
 
