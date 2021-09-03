@@ -27,33 +27,3 @@
 // 'Apple, Apple, Orange, Apple, Mango' => $2.65
 // 'Apple, Apple, Orange, Apple, Mango, Apple, Mango' => $2.95
 // 'Mango, Mango, Mango, Apple, Apple, Orange, Orange, Orange, Apple, Mango' => $4.40
-
-
-
-var twoSum = function (nums, target) {
-  // fast hashMap method
-  // time: O(N) since looping once only. Space: O(N) since will scale to amount of elements
-  const hashMap = {}
-  for (let i = 0; i < nums.length; i++) {
-    const diff = target - nums[i];
-    if (hashMap.hasOwnProperty(diff)) {
-      return [hashMap[diff], i]
-    } else {
-      hashMap[nums[i]] = i;
-    }
-  }
-
-  /*
-  // slow method. two nested for loops.
-  // time: O(N^2) since looping through twice. Space: O(1). No additional space
-  for (let i = 0; i < nums.length; i++) {
-      for (let j = i+1; j < nums.length; j++) {
-          if (nums[i] + nums[j] === target) {
-              return [i, j];
-          }
-      }
-
-  }
-  */
-  return [];
-};

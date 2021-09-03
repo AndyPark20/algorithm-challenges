@@ -2,6 +2,7 @@
 
 
 
+//My Previous answer
 // function twoNumberSum(array, targetSum) {
 
 //   //Loop thru the array,
@@ -26,31 +27,28 @@
 
 
 var twoSum = function (nums, target) {
-  // fast hashMap method
-  // time: O(N) since looping once only. Space: O(N) since will scale to amount of elements
-  const hashMap = {}
-  for (let i = 0; i < nums.length; i++) {
-    const diff = target - nums[i];
-    if (hashMap.hasOwnProperty(diff)) {
-      return [hashMap[diff], i]
-    } else {
-      hashMap[nums[i]] = i;
-    }
-  }
+  //use Hashmap to store key value pairs as nums array is looped
+    //subtract the values at index (this will be X) from target number (this will be Y value)
+    //if hashmap object has value Y
+        //push that number into array.
+    // if it doesn't
+      //set index and values as key value pair.
 
-  /*
-  // slow method. two nested for loops.
-  // time: O(N^2) since looping through twice. Space: O(1). No additional space
-  for (let i = 0; i < nums.length; i++) {
-      for (let j = i+1; j < nums.length; j++) {
-          if (nums[i] + nums[j] === target) {
-              return [i, j];
-          }
+    const hashMap ={};
+    let emptyArray=[];
+    for (let i=0;i<nums.length;i++){
+      const targetDiff = target-nums[i]
+      if(hashMap.hasOwnProperty(targetDiff)){
+        return [targetDiff,nums[i]]
+      }else{
+        hashMap[nums[i]]= i;
       }
 
-  }
-  */
-  return [];
-};
+      if(emptyArray.length ===0){
+        return [];
+      }
 
-console.log(twoSum([3,5,-4,8,11,1,-1,6], 10))
+}
+}
+
+console.log(twoSum([3,0], 10))
