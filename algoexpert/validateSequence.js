@@ -9,12 +9,11 @@
 
 function isValidSubsequence(array,sequence){
   let result =null;
-  for (let i=0;i<array.length;i++){
-    if(sequence.includes(array[i])){
+  for (let i=0;i<sequence.length;i++){
+    if(array[sequence[i]]){
       result =true;
-    }else{
-      result = false;
     }
+     return false;
   }
   return result;
 }
