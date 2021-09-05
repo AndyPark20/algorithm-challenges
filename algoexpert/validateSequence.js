@@ -11,7 +11,7 @@ function isValidSubsequence(array,sequence){
   let result =null;
   let sequenceIndex=0;
   for (let i=0;i<array.length;i++){
-    if(sequence[sequenceIndex]===array[i]){
+    if(sequence[sequenceIndex]===array[i] && i>){
       sequenceIndex++;
       result =true;
     }else{
