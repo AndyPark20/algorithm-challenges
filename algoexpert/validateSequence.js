@@ -10,6 +10,7 @@
 function isValidSubsequence(array,sequence){
   let result =null;
   let sequenceIndex=0;
+  debugger;
   for (let i=0;i<array.length;i++){
     if(sequence[sequenceIndex]===array[i] && sequenceIndex<=sequence.length-1){
       sequenceIndex++;
@@ -21,4 +22,4 @@ function isValidSubsequence(array,sequence){
   return result;
 }
 
-console.log(isValidSubsequence([5,1,22,25,6,-1,8,11],[1,6,-1,10]))
+console.log(isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [25]))
