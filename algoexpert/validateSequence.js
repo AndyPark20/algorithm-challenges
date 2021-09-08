@@ -8,18 +8,15 @@
 
 
 function isValidSubsequence(array,sequence){
-  let result =null;
-  let sequenceIndex=0;
-  debugger;
-  for (let i=0;i<array.length;i++){
-    if(sequence[sequenceIndex]===array[i] && sequenceIndex<=sequence.length-1){
-      sequenceIndex++;
-      result =true;
-    }else{
-      result=false;
-    }
-  }
-  return result;
+ let arrIdx=0;
+ let seqIdx =0;
+ while(arrIdx<array.length && seqIdx <sequence.length){
+   if(array[arrIdx]===sequence[seqIdx]){
+     seqIdx++;
+     arrIdx++;
+   }
+ }
+ return seqIdx ===sequence.length;
 }
 
 console.log(isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [25]))
