@@ -20,3 +20,8 @@ function isValidSubsequence(array,sequence){
 }
 
 console.log(isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [25]))
+
+
+//will need to traverse subsequence and sequence.
+//subsequence also needs to have the same order of integers from sequence
+//in progress
