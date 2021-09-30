@@ -16,20 +16,20 @@
 //Generate a random number from list of array of numbers
 
 
-let arrayOfNumbers =[1,2,3,4];
+// let arrayOfNumbers =[1,2,3,4];
 
 
-function randomNumber(array){
+// function randomNumber(array){
 
-  let roundedUpNumber = null;
+//   let roundedUpNumber = null;
 
-  for (let i=0;i<arrayOfNumbers.length;i++){
-    let randomGeneratedNumber = Math.random() * arrayOfNumbers[i];
-    roundedUpNumber= Math.ceil(randomGeneratedNumber);
-  }
+//   for (let i=0;i<arrayOfNumbers.length;i++){
+//     let randomGeneratedNumber = Math.random() * arrayOfNumbers[i];
+//     roundedUpNumber= Math.ceil(randomGeneratedNumber);
+//   }
 
-  return roundedUpNumber;
-}
+//   return roundedUpNumber;
+// }
 
 
-console.log(randomNumber(arrayOfNumbers));
+// console.log(randomNumber(arrayOfNumbers));
