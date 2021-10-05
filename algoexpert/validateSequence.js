@@ -16,8 +16,7 @@ function isvalidSubsequence(array, sequence){
       seqIdx++;
     }
   }
-  console.log(seqIdx)
-  if (seqIdx === array.length) {
+  if (seqIdx === sequence.length) {
     return true;
   }else{
     return false;
@@ -29,4 +28,4 @@ function isvalidSubsequence(array, sequence){
 
 
 
-console.log(isvalidSubsequence([1,2,4,9,10,14],[1,4,14]))
+console.log(isvalidSubsequence([1,2,4,9,10,14],[1,15,14]))
