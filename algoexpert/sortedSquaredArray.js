@@ -7,18 +7,19 @@ function sortedSquaredArray(array) {
     // Loop thru the sorted array
       //Use pow method to square each values at index of the array.
       //push the squared value into the squaredArray variable and return it.
-
+//  DO NOT MODIFY THE INPUT ARRAY~~~!!!
 
   let squaredArray=[];
+
   for (i=0;i<array.length;i++){
     if(array[i]>=0){
       squaredArray.push(Math.pow(array[i], 2))
     }else{
-      squaredArray.unshift(array[i])
+      squaredArray.unshift(-(Math.pow(array[i],2)))
     }
 
   }
-  // return squaredArray.sort((a,b)=>a-b);
+  return squaredArray.sort((a,b)=>a-b);
 }
 
 console.log(sortedSquaredArray([1, 2, 3, 5, 6, 8, 9]))
