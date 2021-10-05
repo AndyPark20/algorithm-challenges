@@ -11,5 +11,15 @@ function isvalidSubsequence(array, sequence){
     //else
       //return false;
   let seqIdx=0;
-
+  for (let i=0;i<array.length;i++){
+    if(array[i]=== sequence[0]){
+      seqIdx++;
+    }
+    if(seqIdx === array.length){
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log(isvalidSubsequence([1,2,4,9,10,14],[1,4,14]))
