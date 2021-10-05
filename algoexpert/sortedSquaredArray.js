@@ -10,16 +10,16 @@ function sortedSquaredArray(array) {
 //  DO NOT MODIFY THE INPUT ARRAY~~~!!!
 
   let squaredArray=[];
-
-  for (i=0;i<array.length;i++){
-    if(array[i]>=0){
-      squaredArray.push(Math.pow(array[i], 2))
+  const newArray = [...array];
+  for (i=0;i<newArray.length;i++){
+    if(newArray[i]>=0){
+      squaredArray.push(Math.pow(newArray[i], 2))
     }else{
-      squaredArray.unshift(-(Math.pow(array[i],2)))
+      squaredArray.unshift((Math.pow(newArray[i],2)))
     }
 
   }
   return squaredArray.sort((a,b)=>a-b);
 }
 
-console.log(sortedSquaredArray([1, 2, 3, 5, 6, 8, 9]))
+console.log(sortedSquaredArray([1, -2, -3, 5, 6, 8, -9]))
