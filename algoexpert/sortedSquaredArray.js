@@ -8,12 +8,17 @@ function sortedSquaredArray(array) {
       //Use pow method to square each values at index of the array.
       //push the squared value into the squaredArray variable and return it.
 
-  let sortedArray = array.sort();
+
   let squaredArray=[];
-  for (i=0;i<sortedArray.length;i++){
-    squaredArray.push(Math.pow(sortedArray[i],2))
+  for (i=0;i<array.length;i++){
+    if(array[i]>=0){
+      squaredArray.push(Math.pow(array[i], 2))
+    }else{
+      squaredArray.unshift(array[i])
+    }
+
   }
-  return squaredArray;
+  return squaredArray.sort((a,b)=>a-b);
 }
 
-console.log(sortedSquaredArray([4,1,2,19,-1]))
+console.log(sortedSquaredArray([1, 2, 3, 5, 6, 8, 9]))
