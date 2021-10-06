@@ -9,6 +9,10 @@ function tournamentWinner(competitions, results) {
 
 
   //create a variable for the team that won the series
+  // create a variable that will increment to loop competitions and results array and start at 0
+  //at that index use for loop to loop thru the array at index.
+    // If the value at index of results is 0, then add index + 1, and use this index to determine the name of the away team in competitions array
+    // if the value at index of results is 1, then index -1, and use this index to determine the name of the home team
 
 
 
