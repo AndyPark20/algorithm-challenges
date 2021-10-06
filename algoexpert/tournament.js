@@ -20,12 +20,24 @@ function tournamentWinner(competitions, results) {
     for (let i=0;i<competitions.length;i++){
       if(results[x]===0){
        winner= competitions[i][results[x]+1]
+       x++;
+      }else {
+        winner = competitions[i][results[x]-1];
+        x++
+      }
+      if(!scoreRecord[winner]){
+        scoreRecord[winner] =1;
+      }else{
+        scoreRecord[winner]++
       }
     }
 
-    console.log(winner)
+    let finalWinner =Object.keys(scoreRecord).reduce((a,b)=>scoreRecord[a]> scoreRecord[b] ?a : b)
 
+    return finalWinner
 
-
-  return '';
 }
+
+let compete=[["HTML","C++"], ["C++","Python"], ["Python", "HTML"]]
+let score =[0,0,1]
+console.log(tournamentWinner(compete,score))
