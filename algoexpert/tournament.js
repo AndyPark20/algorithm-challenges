@@ -7,7 +7,6 @@ function tournamentWinner(competitions, results) {
     // 0--> away team won
     // 1---> home team won
 
-
   //create a variable that will record each team score
   // create a variable that will increment to loop competitions and results array and start at 0
   //at that index use for loop to loop thru the array at index.
@@ -32,9 +31,9 @@ function tournamentWinner(competitions, results) {
       }
     }
 
-    let finalWinner =Object.keys(scoreRecord).reduce((a,b)=>scoreRecord[a]> scoreRecord[b] ?a : b)
+    let finalWinner =Object.keys(scoreRecord).reduce((a,b)=>scoreRecord[a]> scoreRecord[b] ?a : b);
 
-    return finalWinner
+    return finalWinner;
 
 }
 
