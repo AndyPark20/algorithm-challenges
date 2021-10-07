@@ -1,13 +1,13 @@
 
 
 let test ={
-  andy:2,
+  andy:6,
   jarod:4,
-  tim:6
+  tim:-1
 }
 
 function biggest(obj){
-  Object.keys(obj).sort((a,b)=> obj[a]>obj[b] ?a :b)
+  Object.keys(obj).reduce((a,b)=> {debugger obj[a]>obj[b] ?a :b})
 }
 
 console.log(biggest(test))
