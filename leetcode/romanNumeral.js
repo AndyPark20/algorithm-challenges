@@ -16,5 +16,14 @@ let romanNumerals={
   //if it is a property, then add the number into numbers variable.
 
   let numbers =0;
-  let romanNumbers =
+  let romanNumbers =[...string];
+  for (let i=0;i<romanNumbers.length;i++){
+    if(romanNumerals.hasOwnProperty(romanNumbers[i])){
+      numbers+=romanNumerals[romanNumbers[i]];
+    }
+  }
+  return numbers;
 }
+s = "III"
+
+console.log(guessNumber(s))
