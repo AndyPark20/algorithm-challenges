@@ -19,14 +19,12 @@ let romanNumerals={
   let numbers =0;
   let romanNumbers =[...string];
   for (let i=0;i<romanNumbers.length;i++){
-    if(romanNumbers.length>2){
-      numbers+=romanNumerals[romanNumbers[i]];
-    }else{
-      if(romanNumbers[i])
+    if((romanNumbers.length===2)&& (romanNumbers[i]==='I' && (romanNumbers[i+1]==='V' || romanNumbers[i+1]==='X'))){
+      numbers=romanNumerals[romanNumbers[i+1]]- romanNumerals[romanNumbers[i]]
     }
   }
   return numbers;
 }
-s = "IV"
+s = "IX"
 
 console.log(guessNumber(s))
