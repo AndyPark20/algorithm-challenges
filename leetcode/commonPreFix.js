@@ -12,25 +12,19 @@ var longestCommonPrefix = function (strs) {
 
       let valueTocompare =strs[0];
       let samePreFix ={};
+      let count =0;
       let finalPreFix=''
-      for (let i=0;i<valueTocompare.length;i++){
-        for(let z=0;z<strs.length;z++){
-          if(strs[z].indexOf(valueTocompare[i])>-1){
-            if(samePreFix[valueTocompare[i]]){
-              samePreFix[valueTocompare[i]]++
-            }else{
-              samePreFix[valueTocompare[i]]=1;
-            }
+      for (let i=0;i<strs.length;i++){
+        for(let z=0;z<strs[i].length;i++){
+          if(strs[i][z] === valueTocompare[count]){
+           if(samePreFix[valueTocompare[count]]){
+             samePreFix[valueTocompare[count]]++;
+           }else{
+             samePreFix[valueTocompare[count]]=1;
+           }
           }
         }
       }
-      console.log(samePreFix)
-    for(keys in samePreFix){
-      if(samePreFix[keys]===strs.length){
-        finalPreFix+=keys;
-      }
-    }
-    return finalPreFix
 };
 
 let strs = ["cir", "car"]
