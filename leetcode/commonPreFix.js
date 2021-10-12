@@ -11,24 +11,27 @@ var longestCommonPrefix = function (strs) {
       //if its not there, then loop out of the array
 
       let valueTocompare =strs[0];
-      let samePreFix ={};
+      let samePreFix =[];
+      let finalPreFix='';
       let count =0;
-      for (let i=0;i<strs.length;i++){
-        for (let z=0;z<strs[i].length;z++){
-          if(strs[i][z]===valueTocompare[count] && strs[i][z+1]=== valueTocompare[count+1]){
-            if(samePreFix[valueTocompare[count]] && samePreFix[valueTocompare[count+1]]){
-              z++;
-              count++;
-              samePreFix[valueTocompare[count]]++;
-            }else{
-              samePreFix[valueTocompare[count]]=1;
-            }
+      for (let i=0;i<valueTocompare.length;i++){
+        for(let z=1;z<strs.length;z++){
+          if(strs[z].indexOf(valueTocompare[i])>-1){
+            samePreFix.push(valueTocompare[i])
+          }else{
+            break;
           }
         }
       }
-      return samePreFix;
+     for(let h=0;h<samePreFix.length;h++){
+      if(samePreFix[h]===valueTocompare[count]){
+        finalPreFix+=valueTocompare[count];
+        count++;
+      }
+     }
+     return finalPreFix;
 };
 
-let strs = ["flower","flight","flowed"];
+let strs = ["cig","cag"]
 
 console.log(longestCommonPrefix(strs))
