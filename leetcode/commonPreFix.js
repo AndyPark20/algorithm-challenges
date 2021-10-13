@@ -6,11 +6,13 @@ var longestCommonPrefix = function (strs) {
 
   let preFix =strs[0];
   let preFixCharacter ="";
-  let preFixCharacterIndex=null;
+  let preFixCharacterIndex=0;
 
   for (let i=0 ;i<preFix.length;i++){
     for (let z=1; z<strs.length;z++){
-      if(strs[z].indexOf(preFix[i]))
+      if ((strs[z].indexOf(preFix[i]) > -1 && i >= 0) || (strs[z].indexOf(preFix[i]) > -1 && i === preFixCharacterIndex+1)){
+        preFixCharacter+=preFix[i]
+      }
     }
   }
 };
