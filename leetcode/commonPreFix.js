@@ -5,21 +5,20 @@
 var longestCommonPrefix = function (strs) {
 
   let preFix =strs[0];
-  let preFixCharacter ="";
 
-  for(let i=1;i<strs.length;i++){
+  if(strs.length ===0){
+    return "";
+  }
 
-    for (let z=0;z<preFix.length;z++){
-      if(strs[i].indexOf(preFix[z])>-1 && !preFixCharacter.includes(preFix[z])){
-        preFixCharacter+=preFix[z];
-      }else{
-        break;
-      }
+  for (let i=1;i<strs.length;i++){
+    while(strs[i].indexOf(preFix)===-1){
+      preFix = preFix.slice(0,preFix.length-1);
     }
   }
-  return preFixCharacter
+return preFix;
+
 }
 
-let strs = ["floght","flood","flight"]
+let strs = ["a"]
 
 console.log(longestCommonPrefix(strs))
