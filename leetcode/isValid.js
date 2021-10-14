@@ -14,8 +14,16 @@ function isValid(s){
   for (let i=0;i<s.length;i++){
     if(hashMapObj.hasOwnProperty(s[i])){
       stack.push(s[i]);
+    }else{
+      let poppedElement = stack.pop();
+      if(s[i] !==hashMapObj[poppedElement]){
+        return false;
+      }
     }
   }
+ return stack.length ===0;
 }
 
 let s =['[',']','{','{']
+
+console.log(isValid(s))
