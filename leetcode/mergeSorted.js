@@ -19,12 +19,14 @@ let array=[];
       array.push(nums2[z]);
     }
   }
-  console.log(array);
+ return array.sort((a,b)=>a-b)
 };
 
-var nums1 = [1, 2, 3, 0, 0, 0]
-var m = 3
-var nums2 = [2, 5, 6]
-var n = 3
+var nums1 =[1, 2, 3, 0, 0, 0]
+var m=3
+var nums2 =[2, 5, 6]
+var n=3
+
+
 
 console.log(merge(nums1,m,nums2,n))
