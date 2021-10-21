@@ -11,10 +11,10 @@ let array=[];
   }
   for (let i=0;i<nums1.length;i++){
     if(nums1[i] >0){
-      array.push(nums1[i])
+       array.push(nums1[i])
     }
   }
-  for (let z=0;z=nums2.length;z++){
+  for (let z=0;z<nums2.length;z++){
     if(nums2[z]>0){
       array.push(nums2[z]);
     }
