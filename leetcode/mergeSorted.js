@@ -14,6 +14,11 @@ let array=[];
       array.push(nums1[i])
     }
   }
+  for (let z=0;z=nums2.length;z++){
+    if(nums2[z]>0){
+      array.push(nums2[z]);
+    }
+  }
   console.log(array);
 };
 
