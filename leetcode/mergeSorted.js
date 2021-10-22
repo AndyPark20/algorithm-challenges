@@ -4,14 +4,14 @@ var merge = function (nums1, m, nums2, n) {
 //looop thru each nums1 and nums2, and if the value at each index is greater than 0, then push the number in the
 //empty array that we created.
 let totalArray = m+n
-
-for (let i=0;i<totalArray.length;i++){
-  debugger;
+let array =[];
+for (let i=0;i<totalArray;i++){
   if(nums1[i]===0){
-    nums1.splice(i,1)
+    nums1.splice(i)
+    array=nums1
   }
 }
-console.log(nums1)
+console.log(array)
 };
 
 var nums1 =[1, 2, 3, 0, 0, 0]
