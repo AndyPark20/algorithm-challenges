@@ -4,22 +4,13 @@ var merge = function (nums1, m, nums2, n) {
 //looop thru each nums1 and nums2, and if the value at each index is greater than 0, then push the number in the
 //empty array that we created.
 
-let array=[];
-
-  if(m ===0 && n===0){
-    return [];
+for (let i=0;i<nums1.length;i++){
+  debugger;
+  if(nums1[i]===0){
+    nums1.splice(i,1)
   }
-  for (let i=0;i<nums1.length;i++){
-    if(nums1[i] >0){
-       array.push(nums1[i])
-    }
-  }
-  for (let z=0;z<nums2.length;z++){
-    if(nums2[z]>0){
-      array.push(nums2[z]);
-    }
-  }
- return array.sort((a,b)=>a-b)
+}
+console.log(nums1)
 };
 
 var nums1 =[1, 2, 3, 0, 0, 0]
