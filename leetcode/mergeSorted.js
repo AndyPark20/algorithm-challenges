@@ -8,10 +8,19 @@ let array =[];
 for (let i=0;i<totalArray;i++){
   if(nums1[i]===0){
     nums1.splice(i)
-    array=nums1
   }
 }
-console.log(array)
+
+for (let i=0;i<totalArray;i++){
+  if(nums2[i]===0){
+    nums2.splice(i)
+  }else{
+    nums1.push(nums2[i])
+  }
+}
+
+console.log(nums1)
+
 };
 
 var nums1 =[1, 2, 3, 0, 0, 0]
