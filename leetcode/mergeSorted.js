@@ -14,6 +14,7 @@ for (let i=0;i<totalArray;i++){
 
 for (let i=0;i<totalArray;i++){
   if(nums2[i]!==0){
+    debugger;
     array.push(nums2[i])
   }
 
