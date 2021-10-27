@@ -1,6 +1,15 @@
 var merge = function (nums1, m, nums2, n) {
 
-  nums1.push(...nums2);
+let array=[];
+  for (let i=0;i<m;i++){
+    array.push(nums1[i])
+  }
+
+  for (let i=0;i<n;i++){
+    array.push(nums2[i])
+  }
+  nums1 = array;
+  nums1.sort((a,b)=>a-b);
 
 };
 
@@ -8,5 +17,8 @@ var nums1= [1, 2, 3, 0, 0, 0]
 var m= 3
 var nums2=[2, 5, 6]
 var n =3
+
+
+
 
 console.log(merge(nums1,m,nums2,n))
