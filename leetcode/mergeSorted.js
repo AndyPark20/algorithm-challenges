@@ -1,15 +1,11 @@
 var merge = function (nums1, m, nums2, n) {
 
-let array=[];
-  for (let i=0;i<m;i++){
-    array.push(nums1[i])
-  }
+nums1.splice(m);
+nums2.splice(n);
 
-  for (let i=0;i<n;i++){
-    array.push(nums2[i])
-  }
-  nums1 = array;
-  nums1.sort((a,b)=>a-b);
+nums1.push(...nums2);
+nums1.sort((a,b)=>a-b);
+return nums1;
 
 };
 
