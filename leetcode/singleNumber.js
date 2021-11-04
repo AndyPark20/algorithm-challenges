@@ -5,7 +5,7 @@ var singleNumber = function (nums) {
       //if not return that value in the array;
   let hashMap ={};
   if(nums.length ===1){
-    nonRepeatedValue= nums[0];
+    return nums[0];
   }else{
     for (let i=0;i<nums.length;i++){
       if(hashMap[nums[i]]){
@@ -15,13 +15,14 @@ var singleNumber = function (nums) {
       }
     }
   }
-  if(Object.values(hashMap)===1){
-    return
+
+  for (keys in hashMap){
+    if(hashMap[keys]===1){
+      return parseInt(keys)
+    }
   }
-
-
 
 };
 
-var nums = [2,2,1]
+var nums = [7]
 console.log(singleNumber(nums));
