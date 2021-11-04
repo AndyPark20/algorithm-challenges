@@ -7,9 +7,14 @@ var singleNumber = function (nums) {
   if(nums.length ===1){
     nonRepeatedValue= nums[0];
   }else{
-
+    for (let i=0;i<nums.length;i++){
+      if(nums.indexOf(nums[i])===-1){
+        nonRepeatedValue = nums[i];
+      }
+    }
   }
 };
 
 
 var nums = [2, 2, 1]
+console.log(singleNumber(nums));
