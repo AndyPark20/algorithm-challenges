@@ -13,8 +13,9 @@ var singleNumber = function (nums) {
       }
     }
   }
+  return nonRepeatedValue;
+
 };
 
-
-var nums = [2, 2, 1]
+var nums = [2,2,1]
 console.log(singleNumber(nums));
