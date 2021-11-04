@@ -24,5 +24,5 @@ var singleNumber = function (nums) {
 
 };
 
-var nums = [7]
+var nums = [4, 1, 2, 1, 2]
 console.log(singleNumber(nums));
