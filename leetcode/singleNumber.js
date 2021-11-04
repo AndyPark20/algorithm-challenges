@@ -3,17 +3,23 @@ var singleNumber = function (nums) {
     //if the length is NOT 1, use indexOf to see if the value of the index of the array is present.
       //if it is, then keep looping
       //if not return that value in the array;
-  let nonRepeatedValue =null;
+  let hashMap ={};
   if(nums.length ===1){
     nonRepeatedValue= nums[0];
   }else{
     for (let i=0;i<nums.length;i++){
-      if(nums.indexOf(nums[i])===-1){
-        nonRepeatedValue = nums[i];
+      if(hashMap[nums[i]]){
+        hashMap[nums[i]]++
+      }else{
+        hashMap[nums[i]]=1;
       }
     }
   }
-  return nonRepeatedValue;
+  if(Object.values(hashMap)===1){
+    return
+  }
+
+
 
 };
 
