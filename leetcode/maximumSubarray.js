@@ -7,8 +7,10 @@ var maxSubArray = function (nums) {
     let duplicateArray=[];
 
     for (let i=0;i<sortedArray.length;i++){
-      if(nums.indexOf(sortedArray[i])>-1){
-        duplicateArray.push(sortedArray[i]);
+      if(sortedArray.indexOf(sortedArray[i])!==-1){
+        let spliced=sortedArray.splice(i,1);
+        duplicateArray.push(spliced)
+
       }
     }
     return duplicateArray;
