@@ -3,9 +3,16 @@ var maxSubArray = function (nums) {
     //loop the sorted array, and use the indexOf to find any dubplicates
       //if duplicates are found then add it to a new array;
        //loop thru the new array and add the values in the array
+    const sortedArray = nums.sort((a,b)=>a-b);
+    let duplicateArray=[];
 
-    const sortedArray = nums.sort((a,b)=>a-b)
-  return sortedArray
+    for (let i=0;i<sortedArray.length;i++){
+      if(nums.indexOf(sortedArray[i])>-1){
+        duplicateArray.push(sortedArray[i]);
+      }
+    }
+    return duplicateArray;
+
 };
 
 
