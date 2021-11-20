@@ -13,13 +13,14 @@ var plusOne = function(digits){
       stringNumber+=digits[i]
 
     }
-    let addOneFinalNumber = (parseInt(stringNumber) + 1).toString();
+    console.log(BigInt(stringNumber))
+    let addOneFinalNumber = (Number(stringNumber) + 1).toString();
 
     for (let k=0;k<addOneFinalNumber.length;k++){
-      finalArray.push(parseInt(addOneFinalNumber[k]));
+      finalArray.push(Number(addOneFinalNumber[k]));
     }
     return finalArray;
 }
 
 
-console.log(plusOne([9]))
+console.log(plusOne([6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]));
