@@ -8,12 +8,18 @@ var plusOne = function(digits){
     //create a new array containing all the digits as value at index.
 
     let stringNumber ='';
+    let finalArray=[];
     for (let i=0;i<digits.length;i++){
       stringNumber+=digits[i]
 
     }
-    console.log(stringNumber)
+    let addOneFinalNumber = (parseInt(stringNumber) + 1).toString();
+
+    for (let k=0;k<addOneFinalNumber.length;k++){
+      finalArray.push(parseInt(addOneFinalNumber[k]));
+    }
+    return finalArray;
 }
 
 
-console.log(plusOne([1,1,5,6]))
+console.log(plusOne([9]))
