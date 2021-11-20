@@ -6,4 +6,14 @@ var plusOne = function(digits){
     //convert the string into number.
     //Add one
     //create a new array containing all the digits as value at index.
+
+    let stringNumber ='';
+    for (let i=0;i<digits.length;i++){
+      stringNumber+=digits[i]
+
+    }
+    console.log(stringNumber)
 }
+
+
+console.log(plusOne([1,1,5,6]))
