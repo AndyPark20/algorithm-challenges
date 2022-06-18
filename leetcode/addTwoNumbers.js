@@ -11,8 +11,10 @@ function addTwoNumbers(arr1,arr2){
     convertedArr2+=arr2[z];
   }
   let combinedNumber=((parseInt(convertedArr1) + parseInt(convertedArr2)).toString()).split('');
-  console.log(combinedNumber)
+  let convertStringToNumber = combinedNumber.map(Number);
+  let finalResult = convertStringToNumber.reverse();
+  return finalResult;
 
 }
 
-addTwoNumbers([1,2,3],[4,8,9])
+console.log(addTwoNumbers([2,4,3],[5,6,4]));
