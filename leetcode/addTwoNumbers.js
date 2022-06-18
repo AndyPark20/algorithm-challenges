@@ -10,7 +10,7 @@ function addTwoNumbers(arr1,arr2){
   for (let z=0;z<arr2.length;z++){
     convertedArr2+=arr2[z];
   }
-  let combinedNumber=parseInt(convertedArr1) + parseInt(convertedArr2);
+  let combinedNumber=((parseInt(convertedArr1) + parseInt(convertedArr2)).toString()).split('');
   console.log(combinedNumber)
 
 }
