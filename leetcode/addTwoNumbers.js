@@ -1,7 +1,7 @@
 
 function addTwoNumbers(arr1,arr2){
-
-  console.log(convertArr)
+  var convertArr1 = arr1.toString()
+  console.log(convertArr1)
 }
 
-addTwoNumbers([1,2,3])
+addTwoNumbers([1,2,3],[4,8,9])
