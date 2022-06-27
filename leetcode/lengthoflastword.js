@@ -7,6 +7,11 @@ var lengthOfLastWord = function (s) {
   let convertArray = s.split('')
   let count =0;
   for (let i=0;i<convertArray.length;i++){
-
-  }
+    if(convertArray[i] !=='' && i>count){
+      count =i;
+      return convertArray[i];
+    };
+  };
 };
+
+console.log(lengthOfLastWord("   fly me   to   the moon  "));
