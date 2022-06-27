@@ -15,3 +15,5 @@ var lengthOfLastWord = function (s) {
 };
 
 console.log(lengthOfLastWord("luffy is still joyboy"));
+
+//Pass
