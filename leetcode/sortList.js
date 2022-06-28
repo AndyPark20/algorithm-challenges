@@ -7,8 +7,16 @@
 
 
 var deleteDuplicates = function(head){
+  let previousValue = null;
 
+  for(let i=0;i<head.length;i++){
+    if(previousValue === head[i]){
+      previousValue =head[i];
+      head.split(head[i],1);
+    };
+    return head;
+  }
 }
 
 
-deleteDuplicates()
+console.log(deleteDuplicates([1,1,2,3]));
