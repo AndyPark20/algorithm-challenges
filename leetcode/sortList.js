@@ -13,11 +13,11 @@ var deleteDuplicates = function(head){
       previousValue= head[i]
     if(previousValue === head[i]){
       previousValue =head[i];
-      head.split(head[i],1);
+      head.splice(head[i],1);
     };
     return head;
   }
 }
 
 
-console.log(deleteDuplicates([1,1,2,3]));
+console.log(deleteDuplicates([1,1,2,2,3]));
