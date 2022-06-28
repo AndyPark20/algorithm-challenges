@@ -10,9 +10,8 @@ var deleteDuplicates = function(head){
   let previousValue = null;
 
   for(let i=0;i<head.length;i++){
-      previousValue= head[i]
+      let previousValue = head[i];
     if(previousValue === head[i]){
-      previousValue =head[i];
       head.splice(head[i],1);
     };
     return head;
