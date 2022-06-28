@@ -14,8 +14,8 @@ var deleteDuplicates = function(head){
     if(previousValue === head[i]){
       head.splice(head[i],1);
     };
-    return head;
   }
+      return head;
 }
 
 
