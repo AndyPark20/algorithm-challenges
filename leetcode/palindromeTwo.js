@@ -10,11 +10,11 @@ var isPalindrome = function(s) {
   //remove commas
   for (let i=0;i<copiedString.length;i++){
     if(copiedString[i] ===':'){
+      console.log(copiedString);
       copiedString.splice(i,1);
-      copiedString.join().toString();
     }
   }
-  return copiedString;
+      return copiedString.join('');
 };
 
 
