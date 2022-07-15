@@ -4,10 +4,11 @@
 var isPalindrom = function(s){
   var removedString = s.toLowerCase().replace(/[^a-z]+/g, "");
   var reversedString = removedString.split("").reverse().join("");
-  return removedString;
+  if(removedString === reversedString) return true;
+  return false;
 }
 
 
-var s="A man, a plan, a canal: Panama"
+var s=" ";
 
 console.log(isPalindrom(s))
