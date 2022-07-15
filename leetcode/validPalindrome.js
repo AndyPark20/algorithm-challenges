@@ -2,7 +2,9 @@
 
 
 var isPalindrom = function(s){
-  return s;
+  var removedString = s.toLowerCase().replace(/[^a-z]+/g, "");
+  var reversedString = removedString.split("").reverse().join("");
+  return removedString;
 }
 
 
