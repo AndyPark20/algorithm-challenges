@@ -9,6 +9,6 @@ var isPalindrom = function(s){
 }
 
 
-var s=" ";
+var s="P0";
 
 console.log(isPalindrom(s))
