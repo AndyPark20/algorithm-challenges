@@ -3,5 +3,3 @@ var mySqrt = function (x) {
   let truncatedNumber = Math.trunc(sqrtNumber);
   return truncatedNumber;
 };
-
-console.log(mySqrt(8))
