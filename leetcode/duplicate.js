@@ -9,7 +9,9 @@ var containsDuplicate = function (nums) {
   for (let i=0;i<nums.length;i++){
     checkNumber = nums[i];
     index = i;
-    if(i !==)
+    if(i!==index && nums.indexOf(checkNumber) >-1){
+      return true;
+    }
   }
-
+  return false;
 };
