@@ -8,6 +8,7 @@ var containsDuplicate = function (nums) {
   let result = null;
 
   for (let i=0;i<nums.length;i++){
+    debugger;
     checkNumber = nums[i];
     index = i;
     if(i!==index && nums.indexOf(checkNumber) >-1){
