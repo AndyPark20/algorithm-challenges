@@ -5,12 +5,12 @@
 var containsDuplicate = function (nums) {
   let checkNumber =null;
   let index= null;
-  let result = null;
+  let result = 0;
 
   for (let i=0;i<nums.length;i++){
-    checkNumber = nums[i];
-    index = i;
-    if(i!==index && checkNumber === nums[i+1]){
+    if(i!==index && checkNumber === nums[i]){
+        checkNumber = nums[i];
+        index = i;
       result = true;
     }
     result = false;
