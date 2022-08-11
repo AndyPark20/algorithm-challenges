@@ -6,11 +6,19 @@
 //loop thru the object and if there are characters with the same number as the length of the original array, populate the letters
 
 
+function longestCommonPrefix(arr){
+  let baseValue = arr[0];
 
-const test = 'flower';
+  for (let i=0;i<arr.length;i++){
+    if(arr[i].indexOf(baseValue)!==0){
+        console.log(arr[i])
+    }
+  }
+}
 
-console.log(test.lastIndexOf('flow'))
+const strs = ["flower","flow","flight"];
 
+console.log(longestCommonPrefix(strs))
 
 
 
