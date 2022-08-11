@@ -11,7 +11,6 @@ var longestCommonPrefix = function (strs) {
   }
 
   for (let i=1;i<strs.length;i++){
-    debugger;
     while(strs[i].indexOf(preFix)!==0){
       preFix = preFix.slice(0,preFix.length-1);
     }
@@ -20,6 +19,6 @@ return preFix;
 
 }
 
-let strs = ["flight","floight","flooed"]
+let strs = ["flight","floight","f0ooed"]
 
 console.log(longestCommonPrefix(strs))
