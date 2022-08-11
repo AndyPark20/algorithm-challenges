@@ -10,13 +10,13 @@ function longestCommonPrefix(arr) {
   for (let i = 0; i < arr.length; i++) {
 
     while (arr[i].indexOf(baseValue) !== 0) {
-        baseValue.length !==0 ? baseValue = baseValue.slice(0, baseValue.length - 1) : baseValue=2;
+        baseValue = baseValue.slice(0,baseValue.length-1);
     }
   }
-  return baseValue.length;
+  return baseValue;
 }
 
-const strs = ["flower", "flow", "0light"];
+const strs = ["flower", "flow", "flight"];
 
 console.log(longestCommonPrefix(strs));
 
