@@ -19,6 +19,6 @@ return preFix;
 
 }
 
-let strs = ["flight","floight","f0ooed"]
+let strs = ["flight","floight","fooed"]
 
 console.log(longestCommonPrefix(strs))
