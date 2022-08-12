@@ -21,13 +21,14 @@ function containsDuplicate(nums) {
 /****SOLUTION #2 ****/
   const filterValue = nums.filter((value, index, array)=>{
     if(value === array[index+1]){
+      console.log(value)
       return true;
     }
+      return false;
   })
-        return false;
-
+  return filterValue;
 }
 
-let arr = [1,2,2,3,4];
+let arr = [1,2,2,3,4,4];
 
 console.log(containsDuplicate(arr));
