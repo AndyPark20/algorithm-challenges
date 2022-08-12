@@ -19,7 +19,7 @@ function containsDuplicate(nums) {
 /****###END OF SOLUTION1 ###****/
 
 /****SOLUTION #2 ****/
-  const filterArray = nums.filter((value,index,array)=> value === array[index+1])
+  const filterArray = nums.filter((value,index,array)=> value === array[index+1] || index ===array.length ? value === array[0])
 
   if(filterArray.length !==0){
     return true
