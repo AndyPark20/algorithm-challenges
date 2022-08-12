@@ -31,3 +31,13 @@
 // let arr = [1,2,2,3,4];
 
 // console.log(containsDuplicate(arr));
+
+function makeAdder(x){
+  return  function(y){
+    return x+y
+  }
+}
+
+
+const add5=makeAdder(5);
+console.log(add5(10))
