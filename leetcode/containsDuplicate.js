@@ -19,16 +19,14 @@ function containsDuplicate(nums) {
 /****###END OF SOLUTION1 ###****/
 
 /****SOLUTION #2 ****/
-  const filterValue = nums.filter((value, index, array)=>{
-    if(value === array[index+1]){
-      console.log(value)
-      return true;
-    }
-      return false;
-  })
-  return filterValue;
+  const filterArray = nums.filter((value,index,array)=> value === array[index+1])
+
+  if(filterArray.length !==0){
+    return true
+  }
+  return false;
 }
 
-let arr = [1,2,2,3,4,4];
+let arr = [1,2,3,1];
 
 console.log(containsDuplicate(arr));
