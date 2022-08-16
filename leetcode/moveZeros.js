@@ -18,7 +18,14 @@ function moveZero(arr){
   // return finalArray;
 
   /**********Solution #2 **********/
-  
+  let highestValue =1;
+  let lowerValue =0;
+  let shuffled = [];
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]>=highestValue){
+
+    }
+  }
   
 }
 
