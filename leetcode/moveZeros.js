@@ -23,7 +23,7 @@ function moveZero(arr){
   let shuffled = [];
   for(let i=0;i<arr.length;i++){
     if(arr[i]>=highestValue){
-
+      
     }
   }
   
