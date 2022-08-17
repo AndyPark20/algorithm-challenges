@@ -26,9 +26,10 @@ function moveZero(arr){
     }
   }
 
-  for(let i=lastNonZeroIndex;i<arr.length;i++){
-    arr[i]=0;
-  }
+  //Last two values of the array will be 0
+  arr[arr.length-1] =0;
+  arr[arr.length-2]=0; 
+
   return arr;  
 }
 
