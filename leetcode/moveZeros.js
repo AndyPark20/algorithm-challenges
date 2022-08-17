@@ -26,15 +26,13 @@ function moveZero(arr){
     }
   }
 
-  arr.sort((a,b)=>a-b);
-  arr[arr.length-1] =0;
-  arr[arr.length-2]=0;
-
-  return arr;
-  
+  for(let i=lastNonZeroIndex;i<arr.length;i++){
+    arr[i]=0;
+  }
+  return arr;  
 }
 
-let nums = [1,4,23,55,0,66,3,0];
+let nums = [0,1,0,3,12];
 
 
 console.log(moveZero(nums));
