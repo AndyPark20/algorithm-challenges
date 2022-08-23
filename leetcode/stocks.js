@@ -4,8 +4,10 @@
 function bestDayStocks(prices){
   let priceByDays ={};
   for(let i=0;i<prices.length;i++){
-
-  }
+    if(!priceByDays[prices[i]]){
+      priceByDays[i]=price[i];
+    };
+  };
 }
 
 
