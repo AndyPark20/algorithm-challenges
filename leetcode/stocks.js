@@ -12,7 +12,7 @@ function bestDayStocks(prices){
       largest=prices[i]
     }
   }
-  return largest-smallest;
+  // return largest-smallest;
 }
 
 
