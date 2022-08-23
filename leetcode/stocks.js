@@ -2,12 +2,17 @@
 
 
 function bestDayStocks(prices){
-  let priceByDays ={};
+  let smallest =0;
+  let largest =1;
+
   for(let i=0;i<prices.length;i++){
-    if(!priceByDays[prices[i]]){
-      priceByDays[i]=price[i];
-    };
-  };
+    if(prices[i]<=smallest){
+      smallest=prices[i];
+    }else{
+      largest=prices[i]
+    }
+  }
+  return largest-smallest;
 }
 
 
