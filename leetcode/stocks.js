@@ -3,7 +3,7 @@
 
 function bestDayStocks(prices){
   let smallest =0;
-  let largest =1;
+  let day=0;
 
   for(let i=0;i<prices.length;i++){
     if(prices[i]<=smallest){
