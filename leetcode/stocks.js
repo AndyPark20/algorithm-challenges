@@ -2,8 +2,7 @@
 
 
 function bestDayStocks(prices){
-  let smallest =0;
-  let day=0;
+  let stockHistory={};
 
   for(let i=0;i<prices.length;i++){
     if(prices[])
