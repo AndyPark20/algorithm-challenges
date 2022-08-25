@@ -5,9 +5,11 @@ function bestDayStocks(prices){
   let stockHistory={};
 
   for(let i=0;i<prices.length;i++){
-    if(prices[])
+    if(!stockHistory[i]){
+      stockHistory[i]=prices[i];
+    };
   }
-  // return largest-smallest;
+
 }
 
 
