@@ -10,6 +10,8 @@ function bestDayStocks(prices){
     };
   }
 
+  //Loop thru the object and find the smallest day with smallest value and subtract it from largest day with largest value
+
 }
 
 
